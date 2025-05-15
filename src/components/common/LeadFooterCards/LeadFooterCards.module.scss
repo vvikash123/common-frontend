@@ -1,0 +1,73 @@
+
+.LeadFooterCards {
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    min-height: 223px;
+}
+
+.head-panel {
+    display: flex;
+    margin-bottom: 15px;
+
+    svg {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.footer-panel {
+    margin-top: auto;
+}
+
+// .title {
+//     @include font-size(24);
+//     font-weight: 800;
+//     line-height: 30px;
+//     color: rgba(var(--rgbGreenColor1), 1);
+//     text-transform: uppercase;
+//     margin-bottom: 10px;
+//     @include lineClamp(1);
+// }
+
+// .para {
+//     @include font-size(16);
+//     font-weight: 400;
+//     line-height: 20px;
+//     color: #3D8768;
+//     @include lineClamp(2);
+// }
+
+// .AyurvedaHerbals {
+//     background-color: rgba(var(--rgbGreenLightColor1), 1);
+//     background-image: url(/assets/icons/health/LeafsBg.svg);
+//     background-repeat: no-repeat;
+//     background-position: top -75px right -94px;
+// }
+
+// .CommunityHub {
+//     background-color: #EAEFFE;
+//     background-image: url(/assets/icons/health/UsersBg.svg);
+//     background-repeat: no-repeat;
+//     background-position: top -20px right -33px;
+
+//     .footer-panel {
+//         padding-right: 60px;
+//     }
+
+//     .title {
+//         color: #21409A;
+//     }
+
+//     .para {
+//         color: #536CB3;
+//     }
+// }
+
+@media (max-width: 767px) {
+    .LeadFooterCards {
+        padding: 16px;
+        min-height: 181px;
+    }
+}

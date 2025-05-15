@@ -1,0 +1,341 @@
+@import '@/styles/common/commonClasses/mixin';
+
+.short-wrap {
+  width: 329px;
+  position: relative;
+  flex-shrink: 0;
+}
+.short-overlay {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1c1c1e;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.swiper {
+  [class*='slick-arrow'] {
+    display: block;
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    background-image: url(/assets/icons/svg/short-video-icon.svg);
+  }
+  [class*='slick-prev'] {
+    top: 41%;
+    transform: rotate(180deg);
+  }
+  [class*='slick-prev'][class*='slick-disabled'] {
+    background-image: url('/assets/images/disable-short-arrow.svg');
+    transform: rotate(0deg) !important;
+  }
+  [class*='slick-next'] {
+    top: 55%;
+  }
+  [class*='slick-next'][class*='slick-disabled'] {
+    background-image: url('/assets/images/disable-short-arrow.svg');
+    transform: rotate(180deg) !important;
+  }
+  [class*='slick-vertical'] [class*='slick-slide'] {
+    border: 0;
+  }
+}
+
+.swiper {
+  background: url('/assets/images/short-placeholder.svg') no-repeat center
+    center;
+  background-size: 100%;
+  .swiper-item {
+    position: relative;
+  }
+  [class*='__endImg'] {
+    width: 1px !important;
+    height: 0px !important;
+    background-size: 0 !important;
+    margin: 1% auto 0;
+  }
+  [class*='__endBtn'] {
+    svg {
+      margin-top: 20px;
+    }
+  }
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+}
+
+.sv-sec {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  padding: 14px 16px 22px 16px;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 41%,
+    #5f5e5e52 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  .top-left {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    svg {
+      width: 15px;
+      height: 25px;
+      g {
+        fill: #fff;
+      }
+    }
+  }
+
+  .top-right {
+    margin-left: auto;
+    svg {
+      width: 175px;
+      height: 20px;
+    }
+  }
+}
+
+.ft-box {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 70px; 
+  z-index: 1000;
+  left: 0;
+  width: 100%;
+  padding: 0 16px 10px; 
+  padding-top: 20px;
+  line-height: 1.43;
+  font-size: 0.8125rem;
+  color: #fff;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 14%,
+    #151515 99%
+  );
+  h1 {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 16px;
+    line-height: 1.7;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @supports (-webkit-line-clamp: 3) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+  p:not(.timimg) {
+    font-weight: 500;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @supports (-webkit-line-clamp: 3) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+.playPause {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.icons {
+  margin-left: auto;
+  text-align: right;
+  width: 46px;
+  button {
+    background: none;
+    svg,
+    img {
+      width: 30px;
+      height: 40px;
+      g {
+        fill: rgb(46, 45, 44) !important;
+        use {
+          fill: rgb(46, 45, 44) !important;
+        }
+      }
+    }
+  }
+}
+
+.w-100 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 1000;
+}
+
+.range-slider {
+  width: 100%;
+  height: 2px;
+  display: flex;
+  position: relative;
+  background-color: #959595;
+  .duration {
+    width: 0;
+    background-color: #b52025;
+    height: 2px;
+  }
+}
+
+.ft-content {
+  align-self: flex-end;
+  flex: 1;
+  overflow-y: auto;
+  flex-direction: column;
+  padding-right: 15px;
+  &::-webkit-scrollbar {
+    display: block !important;
+  }
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+    display: block;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background-color: #ccc;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #fff;
+    opacity: 0.5;
+  }
+}
+
+.sv-pointer {
+  position: absolute;
+  display: none;
+  top: -4px;
+  width: 13px;
+  border-radius: 50%;
+  height: 13px;
+  box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.23);
+  background-color: #fefefe;
+}
+
+.timing {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 0 !important;
+}
+
+/* Encapsulate the complex selector */
+.custom-player {
+  [class*='short-wrap'] [class*='__player'][class*='__sm'] {
+    background-size: cover !important;
+    video {
+      object-fit: cover;
+    }
+  }
+}
+
+.scrollbar {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  &::-webkit-scrollbar {
+    display: block !important;
+  }
+}
+
+.share-parent {
+  position: relative;
+
+  .tnn__share-icon-g {
+    position: absolute;
+    right: 45px;
+    bottom: 7px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: #fff;
+    display: flex;
+
+    a {
+      margin: 0 5px;
+      display: flex;
+      span {
+        display: flex;
+        svg {
+          width: 22px;
+          height: 22px;
+          g {
+            fill: none !important;
+            path {
+              fill: #000;
+            }
+          }
+        }
+      }
+    }
+
+    svg {
+      g > g > g > g > g > g > g > g {
+        fill: rgb(68, 68, 68) !important;
+      }
+      circle {
+        stroke: rgb(68, 68, 68) !important;
+      }
+    }
+  }
+}

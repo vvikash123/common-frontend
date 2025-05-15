@@ -1,0 +1,90 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.VideoLeadStory {
+  background-color: rgba(var(--rgbSearchBoxColor), 1);
+  padding: 30px 0;
+}
+
+.position-relative {
+  position: relative;
+  z-index: 2;
+}
+
+.lead-story-col {
+  figure {
+    display: flex;
+
+    >span {
+      flex: 1;
+
+      i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  figcaption {
+
+    &::after {
+      content: '';
+      display: block;
+      background: transparent linear-gradient(270deg, #141A2C00 0%, #141A2C 100%) 0% 0% no-repeat padding-box;
+      width: 100%;
+      height: 100%;
+      left: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      @include font-size(20);
+      line-height: 28px;
+      font-weight: 800;
+
+      +p {
+        @include font-size(14);
+        line-height: 25px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.head-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 30px;
+  margin-bottom: 20px;
+}
+
+.col {
+  figcaption {
+    div {
+      p {
+        @include font-size(16);
+        line-height: 22.4px;
+        font-weight: 800;
+      }
+    }
+  }
+
+  svg {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+  }
+}

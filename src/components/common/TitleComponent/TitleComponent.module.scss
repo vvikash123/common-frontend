@@ -1,0 +1,28 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.TitleComponent {
+    display: inline-block;
+    // letter-spacing: -0.75px;
+    color: #000000;
+    @include font-size(25);
+    line-height: 33px;
+    @media screen and (max-width: 900px) {
+        @include font-size(20);
+    }
+    a{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.title-link{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    svg{
+        width: 34px;
+        height: 34px;
+        margin-left: 8px;
+    }
+}

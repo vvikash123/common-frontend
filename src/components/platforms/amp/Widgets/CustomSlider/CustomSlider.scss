@@ -1,0 +1,80 @@
+.carousel {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.indicators {
+  button {
+    position: absolute;
+    bottom: -12px;
+    font-size: 0;
+    height: auto;
+    top: initial;
+    width: 30px;
+    transform: rotate(0deg) !important;
+  }
+
+  .left-arrow {
+    left: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      background: url('/assets/icons/svg/arrows-livetv.svg') !important;
+      width: 30px;
+      height: 30px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .right-arrow {
+    right: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      background: url('/assets/icons/svg/arrows-livetv.svg') !important;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.live-tv-slider {
+  overflow: unset;
+  position: static;
+
+  .shows-slider {
+    position: static;
+  }
+
+  + .indicators {
+    button {
+      bottom: 42px;
+    }
+  }
+}

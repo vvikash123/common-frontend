@@ -1,0 +1,130 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.HealthConditions {
+  width: 100%;
+  background: rgba(var(--rgbBgColor), 0.05);
+  padding: 60px 0;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background: transparent;
+      padding: 0;
+    }
+
+    .left {
+      width: 50%;
+      padding-right: 120px;
+
+      ul.AtoZ {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 43px;
+        list-style: none;
+
+        li {
+          margin: 0 13px 16px 0px;
+
+          button {
+            border: 1px solid rgba(var(--rgbTextColor), 0.25);
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(var(--rgbTextColor), 1);
+            @include font-size(16);
+            font-style: normal;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            justify-content: center;
+
+            &.active,
+            &:hover {
+              background: rgba(var(--rgbTextColor1), 1);
+              color: rgba(var(--rgbWhiteColor), 1);
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+
+      li {
+        border-bottom: 1px solid rgba(var(--rgbBorderColor), 1);
+        width: calc(50% - 30px);
+        display: flex;
+        align-items: center;
+        margin: 0 30px;
+
+        &.active,
+        &.active:hover,
+        &:hover {
+          border-width: 2px;
+          border-color: rgba(var(--rgbBgColor), 1);
+
+          a,
+          button {
+            font-weight: 700;
+            color: rgba(var(--rgbBgColor), 1);
+
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+
+        &:hover {
+          border-width: 1px;
+
+          a,
+          button {
+            font-weight: 500;
+          }
+        }
+
+        &:nth-child(odd) {
+          margin-left: 0;
+        }
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+
+        a,
+        button {
+          color: rgba(var(--rgbTextColor), 1);
+          @include font-size(16);
+          font-weight: 500;
+          position: relative;
+          padding-left: 23px;
+          display: inline-block;
+          text-align: left;
+          line-height: 110%;
+
+          &::after {
+            background-image: url(/assets/icons/health/arrow-icon-dark.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 13px;
+            height: 13px;
+            top: 7px;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}

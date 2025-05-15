@@ -1,0 +1,81 @@
+/* Add your CSS styles for BGWidgetCard here */
+
+.NewsBox{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border: 0.5px solid #EEEEEE;
+border-radius: 5px;
+padding: 10px;
+margin-bottom: 10px;
+span{
+  letter-spacing: -0.36px;
+  color: #224099;
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+h3{
+  color: #000000;
+  font-size: 15px;
+  margin-bottom: 7px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+p{
+  color: #000000;
+  font-size: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+}
+
+.LatestnewsArticles{
+  margin-bottom: 30px;
+  h4{
+    letter-spacing: -0.5px;
+color: #000000;
+font-size:18px;
+margin-bottom: 20px;
+  }
+}
+
+.LatestnewsArticles [class*=slick-slider] [class*=slick-prev]{
+  width: 40px;
+  background-image: url(/assets/icons/education/NextArrow.svg);
+  font-size: 0;
+  background-size: 49px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  left: -13px;
+  top: 50%;
+  transform: rotate(180deg);
+}
+
+.LatestnewsArticles [class*=slick-slider] [class*=slick-slide]{
+  margin: 0 5px;
+}
+
+.LatestnewsArticles [class*=slick-slider] [class*=slick-track]{
+  margin: 0 -5px;
+}
+.LatestnewsArticles [class*=slick-slider] [class*=slick-list]{
+padding:0 40% 0 0 !important;
+}
+
+.LatestnewsArticles [class*=slick-slider] [class*=slick-next]{
+  width: 40px;
+  background-image: url(/assets/icons/education/NextArrow.svg);
+  font-size: 0;
+  background-size: 49px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  right: -13px !important;
+  top: 50%;
+}

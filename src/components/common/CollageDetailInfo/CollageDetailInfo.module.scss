@@ -1,0 +1,79 @@
+/* Add your CSS styles for BGWidgetCard here */
+.CollageDetailInfo {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  width: 100%;
+  padding: 14px;
+  h2 {
+    letter-spacing: -0.5px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 14px;
+    @media screen and (max-width: 900px) {
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  ul, ol {
+    margin-left: 20px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    color: #000000;
+    font-size: 15px;
+    padding-bottom: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    @media screen and (max-width: 900px) {
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100% !important;
+    margin-top: 20px;
+    th {
+      background: #ebebeb 0% 0% no-repeat padding-box;
+      border: 0.5px solid #b9b9b9;
+    }
+  }
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 13px;
+    p {
+      text-align: left;
+    }
+    @media screen and (max-width: 900px) {
+      padding: 14px;
+    }
+  }
+  iframe {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .CollageDetailInfo {
+    table {
+      word-break: break-word;
+      th {
+        word-break: normal;
+      }
+    }
+  }
+}

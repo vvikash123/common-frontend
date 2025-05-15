@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16.5px" height="11.5px" viewBox="0 0 16.5 11.5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Frame</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Times-HP-NewSection-03" transform="translate(-328.75, -2044.25)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="1.5">
+            <g id="Group-99" transform="translate(-94, 905)">
+                <g id="Frame-480962278" transform="translate(94, 1054)">
+                    <g id="Group-57" transform="translate(200, 67)">
+                        <g id="Frame-513818" transform="translate(123, 10)">
+                            <g id="Frame" transform="translate(6.5, 9)">
+                                <path d="M5.83333302,4.99999964 C5.83333302,5.44202713 6.00892807,5.86594998 6.32148869,6.1785106 C6.6340493,6.49107121 7.05797215,6.66666627 7.49999964,6.66666627 C7.94202713,6.66666627 8.36594998,6.49107121 8.6785106,6.1785106 C8.99107121,5.86594998 9.16666627,5.44202713 9.16666627,4.99999964 C9.16666627,4.55797215 8.99107121,4.1340493 8.6785106,3.82148869 C8.36594998,3.50892807 7.94202713,3.33333302 7.49999964,3.33333302 C7.05797215,3.33333302 6.6340493,3.50892807 6.32148869,3.82148869 C6.00892807,4.1340493 5.83333302,4.55797215 5.83333302,4.99999964 Z" id="Vector"></path>
+                                <path d="M15,5 C13,8.33333333 10.5,10 7.5,10 C4.5,10 2,8.33333333 0,5 C2,1.66666667 4.5,0 7.5,0 C10.5,0 13,1.66666667 15,5 Z" id="Vector"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

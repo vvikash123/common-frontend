@@ -1,0 +1,385 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+.BlackPageHeader{
+    background-color: rgba(var(--rgbSearchBoxColor), 1);
+    background-image: url(/assets/icons/health/lead-bg.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 166px;
+    .container {
+        width: 100%;
+        max-width: var(--containerSize);
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .BlackPageRow{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 166px;
+        justify-content: space-between;
+        .Inputsearch{
+          width: 620px;
+        }
+    }
+
+}
+
+// search bar design
+
+.search-suggestion {
+    background-color: rgba(var(--rgbWhiteColor), 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 380px;
+    margin-top: -5px;
+    border-radius: 5px;
+    border: 1px solid rgba(var(--rgbBorderColor1), 1);
+    @include font-size(12);
+    font-weight: 500;
+  }
+  
+  .tnn__page-holder {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+  
+  .tnn__outer_search {
+    position: relative;
+  }
+  
+  //
+  
+  .ze-col-4 {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    display: flex;
+  }
+  
+  .error-message {
+    padding: 7px 10px 10px 10px;
+    position: absolute;
+    color: red;
+    font-size: 0.8rem;
+  
+    &:empty {
+      display: none;
+    }
+  }
+  
+  .search-show-all-desktop {
+    display: flex;
+    text-align: center;
+    font-weight: 600;
+    text-decoration-line: underline;
+    margin: 0 auto;
+    background: none;
+  }
+  
+  .errormsg_searchresult {
+    margin-top: 10px;
+    color: red;
+    font-size: 0.8rem;
+  
+    &:empty {
+      display: none;
+    }
+  }
+  
+  .no-resultWrap {
+    padding: 10px 15px;
+  }
+  
+  .show-all {
+    width: 100%;
+    background: rgba(var(--rgbBorderColor1), 1);
+    position: sticky;
+    bottom: 0;
+    padding: 10px 0;
+  }
+  
+  .search-hamburger {
+    .search-input {
+      border-radius: 4px;
+      border: 1px #000 solid;
+      padding: 0 0 0 10px;
+      background: transparent;
+  
+      &:focus {
+        border-color: #eda600;
+      }
+  
+      input {
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 4px;
+  
+        appearance: none;
+        outline: none;
+      }
+    }
+  
+    .search-icon {
+      display: none;
+    }
+  }
+
+  .ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    @media only screen and (max-width: 900px) {
+      justify-content: center;
+      border-top: 1px #E1E4E9 solid;
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+    li{
+      padding-left: 16px;
+      &:first-child{
+        padding-left: 0;
+      }
+      a{
+        img{
+          display: block;
+        }
+      }
+    }
+  }
+
+.AuthorWidget{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .Left{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    i{
+      min-width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      display: block;
+      margin-right: 12px;
+      overflow: hidden;
+      span{
+        display: flex;
+        border-radius: 100%;
+        align-items: center;
+        height: 100%;
+      }
+      img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+    h1{
+      color: rgba(255, 255, 255, 1);
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 25px;
+      padding-bottom: 8px;
+    }
+    h2{
+      color: rgba(255, 255, 255, 1);
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 25px;
+      padding-bottom: 8px;
+    }
+    p{
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: #ACB4BC;
+    }
+  }
+  .Right{
+    padding-left: 20px;
+    >span{
+      opacity: 0.5;
+      color: rgba(255, 255, 255, 1);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      padding-bottom: 12px;
+      text-transform: uppercase;
+      display: block;
+    }
+   
+  }
+}
+
+.showAuthor{
+  width: 100%;
+  h1{
+    color: rgba(255, 255, 255, 1);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 62px;
+  }
+  .showAuthorInfo{
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+    i{
+      width: 36px;
+      height: 36px;
+     
+      display: block;
+      position: relative;
+      margin-right: 8px;
+      span{
+        display: block;
+        width: 36px;
+        height: 36px;
+        overflow: hidden;
+        border-radius: 100px;
+      }
+      svg{
+        position: absolute;
+        width: 14px;
+        right: 0;
+        bottom: 0;
+        background: rgba(var(--rgbSearchBoxColor), 1);
+        height: 14px;
+        border-radius: 100px;
+        padding: 1px;
+      }
+      span{
+        display: block;
+      }
+    }
+    p{
+      padding-left: 10px;
+      color: rgba(161, 163, 171, 1);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.6px;
+      line-height: 17px;
+      text-transform: uppercase;
+      a{
+        display: flex;
+        align-items: center;
+      }
+      strong{
+        display: block;
+        color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        text-transform: capitalize;
+        margin-top: 2px;
+      }
+    }
+  }
+}
+
+.FromDoctorWidget{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .DoctorWidgetLeft{
+    display: flex;
+    align-items: center;
+    .DoctorPic{
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      margin-right: 16px;
+      background-color: red;
+      position: relative;
+      svg{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+      }
+    }
+    .Info{
+      h1{
+        color: rgba(255, 255, 255, 1);
+        font-size: 18px;
+        font-weight: 900;
+        font-style: ExtraBold;
+        line-height: 25px;
+       
+      }
+      strong{
+        color: #ACB4BC;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      span{
+        color: #93A1AF;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 7px 0 15px;
+        display: block;
+        strong{
+          color: #658DFF;
+          font-size: 16px;
+          text-transform: capitalize;
+          padding-left: 4px;
+        }
+      }
+      ul{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        li{
+          border-radius: 40px;
+          background-color: rgba(var(--rgbWhiteColor), 0.1);
+          color: rgba(19, 15, 38, 1);
+          font-size: 14px;
+          font-weight: 700;
+          color: rgba(var(--rgbWhiteColor), 1);
+          padding: 4px 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .list{
+    padding: 20px;
+    li{
+      display: flex;
+      color:#FFFFFF;
+      font-size: 14px;
+      font-weight: 600;
+      align-items: center;
+      line-height: 20px;
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      svg{
+        width: 20px;
+        height: 15px;
+        margin-right: 4px;
+      }
+    }
+  }
+  .backlink {
+    border-radius: 12px;
+    opacity: 1;
+    background-color: rgba(var(--rgbBgColor), 1);
+    @include font-size(14);
+    color: rgba(var(--rgbWhiteColor), 1);
+    font-weight: 700;
+    font-style: Bold;
+    padding: 14px 20px;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

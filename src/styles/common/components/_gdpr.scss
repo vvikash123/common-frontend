@@ -1,0 +1,185 @@
+:global {
+  body.euuser {
+    .eu-hide {
+      display: none !important;
+    }
+    .consent-popup {
+      background: #0d0d0d;
+      position: relative;
+      z-index: 100;
+      margin: 0 auto;
+      display: block;
+    }
+    .consent-banner {
+      padding: 16px 0;
+      @include mobile {
+        padding: 16px;
+      }
+      @include tablet {
+        padding: 16px;
+      }
+      h2 {
+        font: 400 20px/32px $primary-font;
+        color: #ffffff;
+        margin-bottom: 10px;
+        @include mobile {
+          font-size: 14px;
+          line-height: 1;
+        }
+      }
+      .column1 {
+        float: left;
+        width: 80%;
+        padding-right: 20px;
+        @include mobile {
+          padding-right: 0px;
+          float: none;
+          width: 100%;
+        }
+        p {
+          font: $primary-font-weight 13px/20px $primary-font;
+          color: #ffffff;
+          @include mobile {
+            font-size: 11px;
+            line-height: 16px;
+          }
+          margin: 0;
+          a {
+            
+            text-decoration: underline;
+            display: inline;
+          }
+        }
+      }
+      .column2 {
+        float: right;
+        width: 20%;
+        text-align: center;
+        height: auto;
+        margin: 0;
+        @include mobile {
+          float: none;
+          position: absolute;
+          width: auto;
+          right: 10px;
+          bottom: 7px;
+        }
+        ul {
+          li {
+            margin-bottom: 8px;
+            list-style: none;
+            #consent-continue-button {
+              font: 400 14px/20px $primary-font;
+              background: 0;
+              border: 1px solid $red;
+              border-radius: 1000px;
+              width: 100%;
+              padding: 10px;
+              text-transform: uppercase;
+              height: auto;
+              
+              cursor: pointer;
+              @include mobile {
+                padding: 4px 16px;
+                font: 400 12px/20px $primary-font;
+              }
+            }
+          }
+        }
+      }
+      .checkbox {
+        display: block;
+        clear: both;
+        border-top: 15px solid transparent;
+        input[type='checkbox'] {
+          display: none;
+        }
+        label {
+          display: inline-block;
+          font: $primary-font-weight 14px/20px $primary-font;
+          padding-left: 23px;
+          cursor: pointer;
+          vertical-align: middle;
+          color: #ffffff;
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            height: 14px;
+            width: 14px;
+            line-height: 15px;
+            background: #fff no-repeat;
+            //@include transition(all 0.5s);
+            border: 1px solid #b1b1b1;
+          }
+          @include mobile {
+            font-size: 11px;
+            width: 80%;
+            line-height: 14px;
+          }
+        }
+        input[type='checkbox']:checked + label:before {
+          background: #135394;
+          border-color: #135394;
+        }
+        input[type='checkbox']:checked + label:after {
+          position: absolute;
+          content: '';
+          border: solid #fff;
+          width: 5px;
+          height: 10px;
+          left: 5px;
+          top: 2px;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+      // policy upaded message
+      &.consent-policy-update-msg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        .column1 {
+          width: auto;
+          padding-right: 44px;
+        }
+        #policy-update-close-btn {
+          background: none;
+          border: none;
+          width: 20px;
+          height: 20px;
+          position: relative;
+          &:before,
+          &:after {
+            content: '';
+            width: 1px;
+            height: 16px;
+            background: #fff;
+            position: absolute;
+            top: 2px;
+            right: 8px;
+            transform: rotate(45deg);
+          }
+          &:after {
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+    &.bgImg {
+      .consent-banner {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .consent-popup {
+        max-width: $wrapper-width-small;
+      }
+    }
+  }
+}

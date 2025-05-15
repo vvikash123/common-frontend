@@ -1,0 +1,161 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.inline-block {
+    display: inline-block;
+}
+
+h1 {
+    &.default-title {
+        @include font-size(40);
+    }
+}
+
+.default-title {
+    color: rgba(var(--rgbTextColor), 1);
+    leading-trim: both;
+    text-edge: cap;
+    @include font-size(34);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 12px;
+
+    strong {
+        display: contents;
+    }
+}
+
+.white-title {
+    .default-title {
+        color: rgba(var(--rgbWhiteColor), 1);
+    }
+
+    .circle {
+        background: rgba(var(--rgbWhiteColor), 1);
+    }
+}
+
+.title-link {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: rgba(var(--rgbBgColor), 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.health-milestones {
+    .default-title {
+        @include font-size(20);
+        line-height: 125%;
+        position: relative;
+        padding-right: 50px;
+    }
+
+    .circle {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.search-widget {
+    .default-title {
+        color: rgba(var(--rgbWhiteColor), 1);
+
+        strong {
+            font-weight: 800;
+        }
+    }
+}
+
+.up-next-title {
+    @extend .white-title;
+
+    .default-title {
+        @include font-size(28);
+    }
+}
+
+.footer-card-desc {
+    .default-title {
+        @include font-size(24);
+        font-weight: 400;
+        line-height: 31.2px;
+
+        strong {
+            font-weight: 800;
+        }
+    }
+}
+
+.footer-card-desc1 {
+    .default-title {
+        @include font-size(24);
+        font-weight: 400;
+        line-height: 31.2px;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}
+
+.footer-card-desc2 {
+    @extend .footer-card-desc1;
+
+    .default-title {
+        color: rgba(var(--rgbWhiteColor), 1);
+    }
+}
+
+.near-by-health-hub-title {
+    .default-title {
+        @include font-size(40);
+        font-weight: 400;
+        line-height: 52px;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .default-title {
+        @include font-size(32);
+    }
+
+    h1 {
+        &.default-title {
+            @include font-size(30);
+        }
+    }
+
+    .up-next-title {
+        .default-title {
+            @include font-size(20);
+        }
+    }
+
+    .near-by-health-hub-title {
+        .default-title {
+            @include font-size(30);
+            line-height: 39px;
+        }
+    }
+}

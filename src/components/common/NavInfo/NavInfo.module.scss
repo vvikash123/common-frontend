@@ -1,0 +1,64 @@
+/* Add your CSS styles for BGWidgetCard here */
+.NavInfo{
+  border-top: 3px solid #D9D9D9;
+  border-bottom: 3px solid #D9D9D9;
+  width: 100%;
+  padding: 10px 0 0;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 90px;
+  z-index: 99;
+  background: #F8F8F8;
+  @media screen and (max-width:900px) {
+    top: 55px;
+  }
+  .NavClick{
+    white-space: nowrap;
+    color: #141313;
+    font-size: 14px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 500;
+    &::after{
+      background-color: transparent;
+      width: 100%;
+      left: 0;
+      height: 3px;
+      content: "";
+      position: absolute;
+      bottom: 0px;
+    }
+    &.active{
+      color: #224099;
+      font-weight: bold;
+        &::after{
+        background-color: #224099;
+        }
+    }
+  }
+}
+
+.NavInfo [class*=slick-slider] [class*=slick-prev]{
+  display: none !important;
+}
+
+.NavInfo [class*=slick-slider] [class*=slick-next]{
+  width: 40px;
+  background-image: url(/assets/icons/education/NextArrow.svg);
+  font-size: 0;
+  background-size: 49px;
+  height: 36px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  right: -13px !important;
+  top: 6px !important;
+}
+.NavInfoMSite{
+  display: flex;
+  white-space: nowrap;
+  overflow: auto;
+  a{
+    margin-right: 25px;
+  }
+}

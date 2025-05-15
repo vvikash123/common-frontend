@@ -1,0 +1,28 @@
+
+@import '@/styles/common/commonClasses/mixin';
+
+.grid-layout {
+  display: flex;
+  gap: 0 24px;
+}
+ 
+.grid-lhs {
+  flex: 1;
+  min-width: 0;
+}
+ 
+.grid-rhs {
+  flex: 0 0 300px;
+  width: 300px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-gap: 0 24px;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

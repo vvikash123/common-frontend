@@ -1,0 +1,61 @@
+
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+// quote component css start
+// .container {
+//   composes: container from 'styles/common/commonClasses/commonClasses.scss';
+// }
+ 
+@mixin title($fSize: 0.8125rem, $fWeight: 500, $lHeight: 1.57) {
+  font-size: $fSize;
+  font-weight: $fWeight;
+  line-height: $lHeight;
+}
+ 
+.quote-section {
+  padding: 12px 30px 12px 44px;
+  border: 2px solid var(--bgBlack);
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.45;
+  .quote-text {
+    blockquote {
+      @include title(1rem, normal, 1.6);
+      color: var(--textColor);
+    }
+    .author-name {
+      margin-top: 10px;
+      font-size: 0.875rem;
+    }
+  }
+ 
+  .quote-icon {
+    margin-right: 10px;
+    width: 46px;
+    height: 45px;
+    background-color: var(--bgWhite);
+    position: absolute;
+  }
+  .lt-tp {
+    top: -2px;
+    left: -3px;
+  }
+  .rt-bt {
+    right: -12px;
+    bottom: -6px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+}
+ 
+body[data-theme='dark'] {
+  .quote-icon {
+    svg {
+      filter: invert(1);
+    }
+  }
+}
+ 

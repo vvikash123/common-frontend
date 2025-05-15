@@ -1,0 +1,294 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.search-container {
+  width: 100%;
+}
+
+.nav-search {
+  position: absolute;
+  right: 55px;
+  top: 10px;
+
+  .top-nav-search {
+    min-width: 0px;
+    max-width: 0px;
+    margin-top: 2px;
+    margin-left: auto;
+    white-space: normal;
+    transition: 0.5s;
+    overflow: hidden;
+
+    input {
+      width: 0;
+    }
+  }
+
+  .top-nav-search-open {
+    @extend .top-nav-search;
+    min-width: 400px;
+    max-width: 400px;
+    overflow: inherit;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .search-icon {
+    display: none;
+  }
+
+}
+
+.auto-search-list {
+  z-index: 10;
+  background-color: rgba(var(--rgbWhiteColor), 1);
+  border-radius: 0;
+  padding: 0 15px 9px 15px;
+}
+
+.search {
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  border-radius: 0 0 7px 7px;
+  padding: 4px 0;
+}
+
+.search-input {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.search-icon {
+  right: 0;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 0px 20px 20px 0px;
+
+  svg {
+    margin-left: 15px;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  ul {
+    li {
+      align-items: center;
+      padding: 0px 16px;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 3.75;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        text-decoration: none;
+        color: var(--textColor);
+      }
+    }
+
+    li.sub-menu {
+      background-color: var(--activeSubMenu);
+      width: 100%;
+      padding: 0;
+    }
+
+    ul {
+      width: 100%;
+
+      li {
+        width: 100%;
+        line-height: 4.29;
+        padding: 0 0 0 37px;
+        font-weight: normal;
+        font-size: 0.8125rem;
+
+        img {
+          padding-right: 37px;
+        }
+
+        ul {
+          li {
+            padding: 0 0 0 20px;
+
+            .f-bold {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    li.active {
+      background-color: var(--bgColor);
+      border-left: 5px solid var(--textColor);
+    }
+
+    li.shadow {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+}
+
+.pb-10 {
+  padding-bottom: 20px;
+}
+
+.suggestion__list {
+  padding: 0 15px;
+  display: block;
+  text-decoration: none;
+  color: rgba(var(--rgbBlackColor), 1);
+  border-bottom: 1px solid rgba(var(--rgbBorderColor1), 1);
+
+  &:hover {
+    background: rgba(var(--rgbBlackColor), 0.04);
+  }
+
+  &__title {
+    padding-right: 10px;
+    @include font-size(12);
+    font-weight: 500;
+  }
+
+  .col-img {
+
+    &,
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    .type {
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: 1.83;
+    }
+  }
+
+  .search-list {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+}
+
+
+// search bar design
+
+.search-suggestion {
+  background-color: rgba(var(--rgbWhiteColor), 1);
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 380px;
+  margin-top: -5px;
+  border-radius: 5px;
+  border: 1px solid rgba(var(--rgbBorderColor1), 1);
+  @include font-size(12);
+  font-weight: 500;
+}
+
+.tnn__page-holder {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.tnn__outer_search {
+  position: relative;
+}
+
+//
+
+.ze-col-4 {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  display: flex;
+}
+
+.error-message {
+  padding: 7px 10px 10px 10px;
+  position: absolute;
+  color: red;
+  font-size: 0.8rem;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.search-show-all-desktop {
+  display: flex;
+  text-align: center;
+  font-weight: 600;
+  text-decoration-line: underline;
+  margin: 0 auto;
+  background: none;
+}
+
+.errormsg_searchresult {
+  margin-top: 10px;
+  color: red;
+  font-size: 0.8rem;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.no-resultWrap {
+  padding: 10px 15px;
+}
+
+.show-all {
+  width: 100%;
+  background: rgba(var(--rgbBorderColor1), 1);
+  position: sticky;
+  bottom: 0;
+  padding: 10px 0;
+}
+
+.search-hamburger {
+  .search-input {
+    border-radius: 4px;
+    border: 1px #000 solid;
+    padding: 0 0 0 10px;
+    background: transparent;
+
+    &:focus {
+      border-color: #eda600;
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      padding: 0 10px;
+      border-radius: 4px;
+
+      appearance: none;
+      outline: none;
+    }
+  }
+
+  .search-icon {
+    display: none;
+  }
+}

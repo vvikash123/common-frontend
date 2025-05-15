@@ -1,0 +1,75 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.my-60 {
+  padding: 60px 0;
+  background: #FCF8F8;
+
+}
+
+.not_found_img {
+  margin-bottom: 32px;
+  width: 70%;
+  margin: auto;
+  span{
+    display: block;
+    img{
+      object-fit: contain !important;
+    }
+   
+  }
+}
+
+.notfound {
+  @extend .not_found_img;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not_found_text {
+  max-width: 800px;
+  padding: 20px 0;
+  strong{
+    color: #000000;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+  }
+  p {
+    @include font-size(18);
+    font-weight: 500;
+    color: rgba(var(--rgbTextColor), 1);
+    line-height: 27px;
+    text-align: center;
+  }
+}
+
+.back__button {
+  display: flex;
+  justify-content: center;
+}
+
+.back-link {
+  border-radius: 12px;
+  opacity: 1;
+  @include font-size(14);
+  color: rgba(var(--rgbWhiteColor), 1);
+  font-weight: 700;
+  font-style: Bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #224099 0% 0% no-repeat padding-box;
+box-shadow: 0px 5px 4px #00000029;
+border-radius: 5px;
+width: 289px;
+height: 44px;
+svg{
+  filter: brightness(100);
+    width: 34px;
+    height: 33px;
+    transform: scale(0.7);
+}
+}

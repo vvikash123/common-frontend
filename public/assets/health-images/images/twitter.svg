@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="30" rx="15"></rect>
+        <rect id="path-3" x="0" y="0" width="30" height="30" rx="15"></rect>
+    </defs>
+    <g id="Final-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-|-Article-Page-01" transform="translate(-292, -4700)">
+            <g id="Group-3" transform="translate(0, 3841)">
+                <g id="Group" transform="translate(0, 480)">
+                    <g id="Frame-75441" transform="translate(100, 379)">
+                        <g id="x" transform="translate(192, 0)">
+                            <g id="Frame-Background-Clipped">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                                <rect id="Frame-Background" fill="#0F2F4F" fill-rule="nonzero" mask="url(#mask-2)" x="0" y="0" width="30" height="30" rx="15"></rect>
+                            </g>
+                            <g id="Vector-Clipped">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <g id="path-1"></g>
+                                <path d="M20.1259752,8 L22.6816394,8 L17.0982711,14.3538463 L23.6666667,23 L18.5236641,23 L14.495481,17.7561535 L9.88632382,23 L7.3291151,23 L13.3010864,16.2038461 L7,8 L12.2735674,8 L15.9146932,12.7930769 L20.1259752,8 Z M19.2290212,21.4769234 L20.6451434,21.4769234 L11.5040868,9.44307687 L9.98444055,9.44307687 L19.2290212,21.4769234 Z" id="X" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-4)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

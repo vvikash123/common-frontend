@@ -1,0 +1,315 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.default {
+    color: rgba(var(--rgbSearchKeyNote), 1);
+    leading-trim: both;
+    text-edge: cap;
+    @include font-size(12);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    @include lineClamp(1);
+    a{
+        color: rgba(var(--rgbLightBlueColor),1);
+    }
+}
+.expanded {
+  
+    a{
+        color: rgba(var(--rgbLightBlueColor),1);
+    }
+}
+.collapsed {
+  
+    a{
+        color: rgba(var(--rgbLightBlueColor),1);
+    }
+}
+
+.small-default {
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.caption-with-icon {
+    display: flex;
+    gap: 0 6px;
+    align-items: center;
+
+    svg {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.small,
+.search-key,
+.health-search-key,
+.health-milestones-key,
+.trending-search,
+.featured-article {
+    color: rgba(var(--rgbBlueColor), 1);
+    line-height: 130%;
+    @extend .small-default;
+}
+
+.health-milestones-key {
+    font-weight: 600;
+    color: rgba(var(--rgbSearchKeyNote), 1);
+}
+
+.search-widget {
+    color: rgba(var(--rgbSkyBlueColor), 1);
+    @include font-size(14);
+    letter-spacing: 1.4px;
+    font-weight: 600;
+}
+
+.featured-article {
+    @extend .health-milestones-key;
+    @extend .search-widget;
+    color: rgba(var(--rgbDarkGreenColor), 1);
+    font-weight: 700;
+    text-transform: uppercase;
+  
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    &:not(p)::after {
+        content: '';
+        height: 1px;
+        background: rgba(var(--rgbGreyBorder), 1);
+        flex: 1;
+        max-width: 100%;
+    }
+
+}
+
+.short-stories-title {
+    @extend .featured-article;
+    color: rgba(var(--rgbTextColor), 1);
+
+    &::after {
+        display: none;
+    }
+
+    svg {
+        width: 21px;
+        height: 12px;
+    }
+}
+
+.trending-search,
+.search-trending {
+    color: rgba(var(--rgbTextColor), 1);
+    display: flex;
+    gap: 0 6px;
+    align-items: center;
+
+    svg {
+        width: 15px;
+        height: 8px;
+    }
+}
+
+.search-key {
+    color: rgba(var(--rgbSearchKeyNote), 1);
+}
+
+.health-search-key {
+    color: rgba(var(--rgbSlateColor), 1);
+}
+
+.product-hub {
+    @extend .health-search-key;
+    color: rgba(var(--rgbSearchKeyNote), 1)
+}
+
+.title {
+    color: rgba(var(--rgbTextColor), 1);
+    font-weight: 800;
+    @include font-size(24);
+    @media only screen and (max-width: 900px) {
+        font-weight: 500;
+    }
+}
+
+.v-title,
+.months-title,
+.author-name-inline,
+.author-name-inline-14 {
+    @extend .title;
+}
+
+.v-title {
+    @include font-size(16);
+    line-height: 24px
+}
+
+.para {
+    @include font-size(16);
+}
+
+.author {
+    @include font-size(10);
+    text-transform: uppercase;
+}
+
+.author-name {
+    color: rgba(var(--rgbTextColor), 1);
+    @include font-size(14);
+    font-weight: 500;
+}
+
+.months-title {
+    @include font-size(20);
+}
+
+.months-para {
+    @include font-size(14);
+}
+
+.author-inline,
+.author-name-inline {
+    @include font-size(12);
+    font-weight: 500;
+}
+
+.author-inline-14,
+.author-name-inline-14 {
+    @include font-size(14);
+}
+
+.search-trending {
+    color: rgba(var(--rgbWhiteColor), 0.6);
+}
+
+.list-card-title {
+    @extend .title;
+    @include font-size(16);
+    font-weight: 700;
+    line-height: 130%;
+    @media only screen and (max-width: 900px) {
+        font-weight: 500;
+    }
+}
+
+.videos-caption {
+    color: rgba(var(--rgbWhiteColor), 1);
+    gap: 0 10px;
+}
+
+.videos-black-bg-caption {
+    @extend .videos-caption;
+
+    svg {
+        flex: 0 0 36px;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.videos-para {
+    @extend .videos-caption;
+}
+
+.videos-caption-listing {
+    @extend .videos-black-bg-caption;
+    color: rgba(var(--rgbBlackColor), 1);
+}
+
+.videos-small-tag {
+    @extend .small-default;
+    font-weight: 600;
+    color: rgba(var(--rgbLightBlueColor), 1);
+}
+
+.videos-listing-small-tag {
+    @extend .videos-small-tag;
+    color: rgba(var(--rgbSearchKeyNote), 1);
+}
+
+.trending-topics-v-title {
+    @extend .title;
+    @include font-size(20);
+}
+
+.trending-topics-para {
+    @include font-size(14);
+    color: rgba(var(--rgbSearchKeyNote), 1);
+}
+
+.trending-topics-list-v-title {
+    @extend .v-title;
+    @include font-size(18);
+}
+
+.month-picks-v-title {
+    @extend .title;
+    @include font-size(18);
+}
+
+.product-hub-v-title {
+    @include font-size(18);
+    color: rgba(var(--rgbTextColor), 1);
+    font-weight: 700;
+    line-height: 25.2px;
+}
+
+.emergency-first-aid-v-title {
+    @extend .product-hub-v-title;
+}
+
+.recommended-for {
+    @include font-size(10);
+    color: rgba(var(--rgbSearchKeyNote), 1);
+    font-weight: 800;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.footer-card-title {
+    @include font-size(14);
+    font-weight: 600;
+    line-height: 19.12px;
+    letter-spacing: 0.1em;
+    color: #455DDF;
+}
+
+.footer-card-title1 {
+    @include font-size(14);
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.1em;
+    color: rgba(var(--rgbTextColor1), 1);
+}
+
+.footer-card-title2 {
+    @extend .footer-card-title;
+    @include font-size(12);
+    line-height: 16.8px;
+    color: rgba(var(--rgbWhiteColor), 0.75);
+}
+
+.social {
+    &_para {
+        @include font-size(14);
+        font-weight: 400;
+        line-height: 19.6px;
+        letter-spacing: 0.1em;
+        color: rgba(var(--rgbWhiteColor), 0.5);
+    }
+}
+
+.near-by-health-hub-small {
+    @include font-size(14);
+    font-weight: 600;
+    line-height: 19.12px;
+    letter-spacing: 0.1em;
+    color: #455DDF;
+}

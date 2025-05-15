@@ -1,0 +1,145 @@
+.PhotoTopStrip{
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 6px #224099 solid;
+    @media only screen and (max-width: 900px) {
+      margin-top: 20px;
+      border: 0;
+      position: relative;
+    }
+    .PhotoTopStripRow{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      @media only screen and (max-width: 900px) {
+        display: block;
+        height:auto;
+      }
+      .authorinfoRow{
+        display: flex;
+        align-items: center;
+      .authorinfo{
+        display: flex;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+        align-items: center;
+        a{
+          cursor: inherit;
+        }
+        @media only screen and (max-width: 900px) {
+          font-size: 12px;
+          flex-wrap: wrap;
+          align-items: flex-start;
+        }
+        strong{
+          >span{
+            color:#fff;
+          font-size: 14px;
+          font-weight: 700;
+          }
+        }
+        i{
+          min-width: 34px;
+          min-height: 34px;
+          border-radius: 100px;
+          margin-right: 10px;
+          &:empty{
+            display: none;
+          }
+          span{
+            padding: 0;
+            display: block;
+          }
+          img{
+            display: block;
+            min-width: 34px;
+            min-height: 34px;
+            border-radius: 100px;
+          }
+        }
+        >span{
+          color:#fff;
+          font-size: 14px;
+          font-weight: 400;
+          padding-left: 10px;
+          @media only screen and (max-width: 900px) {
+            font-size: 12px;
+            padding-left: 43px;
+            position: relative;
+            top: -13px;
+            width: 100%;
+        }
+          }
+        }
+      }
+      .Verified{
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        color:#0F2F4F;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-left: 14px;
+        background-image: url(/assets/health-images/images/Verified.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 31px;
+        @media only screen and (max-width: 900px) {
+          display: none;
+        }
+        img{
+          display: block;
+          min-width: 34px;
+          min-height: 34px;
+          margin-left: 10px;
+        }
+      }
+      span{
+        color: rgba(15, 47, 79, 1);
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 0px;
+        @media only screen and (max-width: 900px) {
+          font-size: 12px;
+          padding: 0;
+        }
+      }
+    }
+
+      .SocialShare{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        a{
+          display: flex
+        }
+        @media only screen and (max-width: 900px) {
+          justify-content: center;
+          border-top: 1px #E1E4E9 solid;
+          padding-top: 12px;
+          margin-top: 2px;
+        }
+        
+      }
+    }
+  
+
+    .tnn__share-icon-g{
+      display: flex;
+      a{
+        display: block;
+        margin: 0 4px;
+        svg{
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  
+

@@ -1,0 +1,38 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+.HeroSection{
+  width: 100%;
+  background-color: #224099;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  // background-image: url(/assets/icons/health/lead-bg.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  h1{
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 39px;
+  }
+}
+.AboutusContent{
+  color: rgba(15, 47, 79, 1);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29px;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+  p{
+    padding-bottom: 14px;
+  }
+  h2, h3, h4{
+    color: rgba(0, 39, 78, 1);
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    padding-bottom: 14px;
+    line-height: 23px;
+  }
+}

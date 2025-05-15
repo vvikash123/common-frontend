@@ -1,0 +1,138 @@
+
+/* Add your CSS styles for WhatsAppWellness here */ 
+@import '@/styles/common/commonClasses/mixin';
+
+.WhatsAppWellness{
+    width: 100%;
+    border-radius: 32px;
+    background-color: rgba(211, 239, 215, 0.6);
+    display: flex;
+    align-items: center;
+    margin: 80px 0 40px;
+    position: relative;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 767px) {
+        margin: 30px 0;
+        padding-top: 20px;
+    }
+    .Left{
+        width: 50%;
+        padding: 40px;
+        padding-right: 5%;
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(211, 239, 215, 1);
+            order: 2;
+        }
+        p{
+            border-radius: 8px;
+            background-color: rgba(81, 156, 92, 1);
+            color: rgba(255, 255, 255, 1);
+            font-size: 14px;
+            font-weight: 400;
+            padding: 4px 10px;
+            text-transform: uppercase;
+            display: inline-block;
+            letter-spacing: 1.3px;
+            margin-bottom: 20px;
+            @media only screen and (max-width: 767px) {
+
+            }
+        }
+        h3{
+            color: rgba(0, 39, 78, 1);
+            font-size: 36px;
+            font-weight: normal;
+            line-height: 47px;
+            display: block;
+            padding-bottom: 10px;
+            @media only screen and (max-width: 767px) {
+                font-size: 28px;
+                line-height: 36px;
+            }
+        }
+        span{
+            color: rgba(0, 0, 0, 1);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25px;
+            padding-bottom: 30px;
+            display: block;
+            @media only screen and (max-width: 767px) {
+                font-size: 14px;
+                padding-bottom: 10px;
+            }
+        }
+        .back-link {
+            border-radius: 12px;
+            opacity: 1;
+            background-color: rgba(var(--rgbTextColor), 1);
+            @include font-size(14);
+            color: rgba(var(--rgbWhiteColor), 1);
+            font-weight: 700;
+            font-style: Bold;
+            padding: 14px 20px;
+            min-width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+          }
+    }
+    .Right{
+        width: 50%;
+        background-image: url(/assets/health-images/images/WhatsAppWellness.png);
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        right: 0;
+        top: -50px;
+        background-size: contain;
+        background-position: bottom;
+        height: 430px;
+        @media only screen and (max-width: 767px) {
+            position: relative;
+            height: 270px;
+            background-size: cover;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+        span{
+            border-radius: 12px 12px 0px 0px;
+            border: 1px solid rgba(255, 245, 230, 1);
+            background-color: rgba(255, 234, 202, 1);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            width: 80%;
+            height: 48px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            color: #000000;
+            @media only screen and (max-width: 767px) {
+                width: 90%;
+                font-size: 8px;
+                height: 40px;
+            }
+            img{
+                width: 52px;
+                display: block;
+                margin-right: 5px;
+            }
+            strong{
+                margin: 0 3px;
+            }
+        }
+    }
+}

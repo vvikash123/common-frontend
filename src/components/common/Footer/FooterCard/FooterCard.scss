@@ -1,0 +1,51 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.FooterCard {
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-panel {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 15px;
+    margin-bottom: 5px;
+
+    svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    >div {
+        svg {
+            width: 98px;
+            height: 17px;
+        }
+    }
+}
+
+.footer-panel {
+    margin-top: 2px;
+}
+
+.WhatsappWellness {
+    background-color: #D3EFD7;
+}
+
+.HealthNewsletter {
+    background-color: #4C64E0;
+}
+
+.CommunityHub {
+    background-color: #EBF7F2;
+}
+
+@media (max-width: 767px) {
+    .FooterCard {
+        padding: 16px;
+        min-height: 164px;
+    }
+}

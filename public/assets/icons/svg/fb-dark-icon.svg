@@ -1,0 +1,32 @@
+<svg
+      width="14px"
+      height="14px"
+      viewBox="0 0 5 10"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <g
+        id="Web-Design"
+        stroke="none"
+        strokeWidth="1"
+        fill="none"
+        fillRule="evenodd"
+      >
+        <g
+          id="HP-V1-Widget"
+          transform="translate(-1186.000000, -137.000000)"
+          fill="#ffffff"
+          fillRule="nonzero"
+        >
+          <g id="top-band" transform="translate(0.000000, 127.000000)">
+            <g id="fb" transform="translate(1186.000000, 10.000000)">
+              <path
+                d="M3.410641,10 L3.410641,5.5 L4.7768465,5.5 L5,3.5 L3.410641,3.5 L3.410641,2.526 C3.410641,2.011 3.4237965,1.5 4.143442,1.5 L4.8723445,1.5 L4.8723445,0.07 C4.8723445,0.0485 4.2462485,0 3.6128435,0 C2.290002,0 1.4617035,0.8285 1.4617035,2.35 L1.4617035,3.5 L0,3.5 L0,5.5 L1.4617035,5.5 L1.4617035,10 L3.410641,10 Z"
+                id="facebook-[#176]"
+              ></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>

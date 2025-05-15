@@ -1,0 +1,61 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.VideoGuidance {
+  background-color: rgba(var(--rgbSearchBoxColor), 1);
+  background-image: url(/assets/icons/health/video-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: 60px 0;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 622px 1fr 1fr;
+  grid-gap: 24px;
+}
+
+.col {
+  figcaption {
+    div {
+      p {
+        @include font-size(16);
+        line-height: 22.4px;
+        font-weight: 800;
+      }
+      + p {
+        margin-left: 46px;
+      }
+    }
+  }
+
+  svg {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  &:first-child {
+    grid-column: 1/2;
+    grid-row: 1/4;
+
+    figcaption {
+      div {
+        p {
+          @include font-size(24);
+          line-height: 33.6px;
+        }
+        + p {
+          // margin-left: 70px;
+          display: none;
+        }
+      }
+    }
+
+    svg {
+      flex: 0 0 60px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

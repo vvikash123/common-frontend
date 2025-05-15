@@ -1,0 +1,86 @@
+.NewsletterWidget{
+    width: 100%;
+    border-radius: 12px;
+    background-color: rgb(76, 100, 224);
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid rgb(76, 96, 224);
+    margin: 20px 0 20px;
+    @media only screen and (max-width: 600px) {
+        margin:0px 0 20px;
+    }
+    .NewsletterRow{
+        padding: 20px 20px 10px;
+        h4{
+            color: rgba(169, 229, 255, 1);
+            font-size: 12px;
+            font-weight: 700;
+            font-style: Bold;
+            letter-spacing: 1.2px;
+            line-height: 16px;
+            text-transform: uppercase;
+        }
+        p{
+            color: rgba(255, 255, 255, 1);
+            font-family: var(--fontFamily);
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 30px;
+            text-transform: uppercase;
+            padding: 4px 0;
+        }
+        span{
+            opacity: 0.8;
+            color: rgba(255, 255, 255, 1);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            strong{
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .NewsletterWidgetInout{
+        width: 100%;
+        position: relative;
+        height: 60px;
+        input{
+            width: 100%;
+            height: 100%;
+            border: 0;
+            appearance: none;
+            padding: 0 85px 0 10px;
+            outline: none;
+        }
+        button{
+            border: 2px solid rgb(76, 100, 224);
+            background-color: rgb(76, 100, 224);
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 76px;
+            height: 100%;
+            opacity: 0.8;
+            background-image: url(/assets/icons/health/newsletterIcon.svg);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+    }
+    .Error{
+        color: red;
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 22px;
+        padding-bottom: 10px;
+    }
+    .submitMessage{
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 22px;
+        padding-bottom: 10px;
+    }
+}

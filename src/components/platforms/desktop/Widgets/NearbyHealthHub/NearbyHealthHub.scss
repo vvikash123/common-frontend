@@ -1,0 +1,19 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.NearbyHealthHub {
+    padding: 0px;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-gap: 0 80px;
+}
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-gap: 0 10px;
+    margin-bottom: 30px;
+}

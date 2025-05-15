@@ -1,0 +1,7 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.grid-layout {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,90 @@
+/* Add your CSS styles for BGWidgetCard here */
+.WhereToStudy {
+  width: 100%;
+  background-color: #fff;
+  padding: 30px 0 50px;
+  background-image: url(/assets/icons/education/CityBg.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 50%;
+  .WhereToStudyTop {
+    width: 100%;
+    text-align: center;
+    h3 {
+      letter-spacing: -0.93px;
+      color: #000000;
+      font-size: 30px;
+      font-weight: bold;
+      display: block;
+      padding-bottom: 10px;
+    }
+    p {
+      color: #000000;
+      font-size: 16px;
+      line-height: 25px;
+      width: 300px;
+      margin: auto;
+    }
+  }
+}
+.SearchWidget {
+  max-width:100%;
+  margin: auto;
+  background: #E9E9E9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  position: relative;
+  height: 49px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  &.whiteBgClass{
+    background-color: #fff;
+  }
+  input {
+    width: 100%;
+    appearance: none;
+    padding: 0 10px;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+  }
+  button {
+    background-color: #224099;
+    width: 214px;
+    height: 43px;
+    appearance: none;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    right: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 900px) {
+      width: 50px;
+      font-size: 0;
+      text-align: center;
+    }
+    svg{
+      width: 23px;
+      height: 16px;
+      @media screen and (max-width: 900px) {
+        width: 16px;
+      }
+    }
+  }
+}
+.adsection{
+  margin: 50px 0 0;
+  width: 100%;
+  img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+}

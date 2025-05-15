@@ -1,0 +1,126 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    list-style: none;
+}
+
+.d-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.trending-search {
+    justify-content: start;
+}
+
+.grid-with-300-rhs {
+    grid-template-columns: 1fr 300px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.ExploreCategories {
+    @extend .d-flex;
+
+    li {
+        button {
+            background: transparent;
+            flex-direction: column;
+            padding: 0;
+            align-items: center;
+        }
+
+        p {
+            color: rgba(var(--rgbBgColor), 1);
+            @include font-size(20);
+            font-weight: 700;
+            text-align: center;
+        }
+
+        i {
+            max-width: 100%;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.ToolsTrackersList {
+    @extend .d-flex;
+
+    li {
+        button {
+            background: transparent;
+            flex-direction: column;
+            padding: 0;
+            align-items: center;
+        }
+
+        i {
+            background: rgba(var(--rgbGreyColor), 1);
+            display: flex;
+            align-items: center;
+            border-radius: 100px;
+            margin: auto;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+
+        p {
+            color: rgba(var(--rgbBlackColor), 1);
+            @include font-size(16);
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 100px;
+            margin: auto;
+        }
+    }
+}
+
+.social-card {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (max-width: 767px) {
+    .ExploreCategories {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        li {
+            i {
+                min-height: 130px;
+                width: 100%;
+                max-width: 130px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

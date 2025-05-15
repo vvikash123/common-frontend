@@ -1,0 +1,12 @@
+// recursiveRender.module.scss
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 8px;
+  }
+  

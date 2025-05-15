@@ -1,0 +1,67 @@
+.navigation {
+  list-style-type: none;
+  padding: 0 15px;
+  width: 100%;
+
+  li {
+    padding: 12px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    a {
+      color: #000;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    button {
+      color: #000;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+    }
+
+    .navClose {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        height: 16px;
+        width: 2px;
+        background-color: #000000;
+        transition: 0.5s;
+      }
+
+      &::before {
+        transform: rotate(0deg);
+      }
+
+      &::after {
+        transform: rotate(-90deg);
+      }
+
+    }
+
+    .navOpen {
+      @extend .navClose;
+
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

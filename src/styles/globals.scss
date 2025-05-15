@@ -1,0 +1,42 @@
+@import '@/styles/desktop/variables';
+@import '@/styles/desktop/base';
+@import '@/styles/mobile/variables';
+@import '@/styles/mobile/base';
+
+.row {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 8px;
+    border: 1px dashed #ccc;
+   
+  }
+  /* Default light theme */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  button {
+    background-color: #6200ea;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #3700b3;
+  }
+  
+  

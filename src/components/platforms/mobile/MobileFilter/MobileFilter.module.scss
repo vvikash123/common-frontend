@@ -1,0 +1,145 @@
+
+/* Add your CSS styles for BGWidgetCard here */ 
+
+.MobileFilter{
+  width: 100%;
+  background: #000000 0% 0% no-repeat padding-box;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  height: 100%;
+  left: 0;
+  // display: none;
+  .MobileFilterTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid #B9B9B9;
+    padding-bottom: 10px;
+    p{
+      color: #000000;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    button{
+      background-color: transparent;
+      padding: 0;
+      appearance: none;
+      outline: none;
+      position: absolute;
+      display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+      width: 90px;
+      right: 0;
+      margin-left: 80px;
+      svg{
+        width: 20px;
+        transform: scale(2);
+        position: relative;
+        top: 20px;
+      }
+    }
+    span{
+      color: #FFA100;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      margin-right: 50px;
+      svg{
+        width: 14px;
+        height: 15px;
+        margin-right: 6px;
+      }
+    }
+  }
+  .MobileFilterRow{
+    background-color: #fff;
+    box-shadow: 9px 15px 10px #00000029;
+    border-radius: 0px 0px 30px 0px;  
+    width: calc(100% - 30px);
+    padding:10px;  
+    height: 100%;
+    overflow: auto;
+
+    .FilterResult{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      border-bottom: 0.5px solid #B9B9B9;
+      padding-bottom: 10px;
+      span{
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #F2F2F2;
+        padding: 6px;
+        margin-right: 10px;
+        color: #8F8F8F;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 6px;
+        i{
+          cursor: pointer;
+          width: 8px;
+          height: 8px;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;      
+          svg{
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+    }  
+    .FilterRow{
+      display: flex;
+      margin-bottom: 20px;
+      .FilterLeft{
+        background-color: #F1F3F6;
+        width: 135px;
+        span{
+          color: #000000;
+          font-size: 12px;
+          border-bottom: 1px #000000 solid;
+          padding: 10px;
+          display: block;
+          font-weight: 500;
+          &.Active{
+            background-color: #224099;
+            color: #fff;
+            font-weight: bold;
+          }
+        }
+      }
+      .FilterRight{
+        width: calc(100% - 135px);
+        padding: 8px;
+        .ResultRow{
+          display: none;
+          .Search{
+            width: 100%;
+            input{
+              height: 37px;
+              background: #F3F3F3 0% 0% no-repeat padding-box;
+              border-radius: 20px;
+              padding: 0 20px;
+              border: 0;
+              appearance: none;
+              color: #9A9A9A;
+              font-size: 12px;
+              font-weight: 500;
+              width: 100%;
+            }
+          }
+          &.Show{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

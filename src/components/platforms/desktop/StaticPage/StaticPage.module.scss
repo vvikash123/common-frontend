@@ -1,0 +1,93 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.HeroSection{
+  width: 100%;
+  background-color: #224099;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .container{
+    width: 100%;
+    max-width: var(--containerSize);
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: left center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &.about-us{
+    .container{
+      // background-image: url(/assets/icons/health/about-bg.png);
+    }
+  }
+  &.contact-us  {
+    .container{
+      // background-image: url(/assets/icons/health/about-bg.png);
+    }
+  }
+  &.terms-of-use  {
+    .container{
+      // background-image: url(/assets/icons/health/about-bg.png);
+    }
+  }
+  h1{
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: -0.75px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.AboutusContent{
+  color: rgb(15, 47, 79);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 60px;
+  word-wrap: break-word;
+  p{
+    padding-bottom: 14px;
+  }
+  h2, h3, h4{
+    color: rgba(0, 39, 78, 1);
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    padding-bottom: 14px;
+    line-height: 23px;
+  }
+  ol{
+    margin-left: 20px;
+    li{
+      padding-bottom: 10px;
+    }
+  }
+  ul{
+    margin-left: 20px;
+    li{
+      padding-bottom: 10px;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+}

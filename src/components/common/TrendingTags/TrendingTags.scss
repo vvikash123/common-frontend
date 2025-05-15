@@ -1,0 +1,171 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.d-flex {
+    display: flex;
+}
+
+.default {
+    @extend .d-flex;
+    border-radius: 8px;
+    leading-trim: both;
+    text-edge: cap;
+    @include font-size(14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    padding: 11px 18px;
+    gap: 0 8px;
+    align-items: center;
+
+    strong {
+        font-weight: 600;
+    }
+}
+
+.default-color {
+    background: rgba(var(--rgbBgGreyColor), 1);
+    color: rgba(var(--rgbBgColor), 1);
+}
+
+.icons {
+
+    &,
+    img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+}
+
+.green-color {
+    background: rgba(var(--rgbGreenLightColor), 1);
+    color: rgba(var(--rgbGreenColor1), 1);
+}
+
+.bg-white-color {
+    background: rgba(var(--rgbWhiteColor), 1);
+    color: rgba(var(--rgbBgColor), 1);
+
+    &.active,
+    &:hover {
+        background: rgba(var(--rgbTextColor1), 1);
+        color: rgba(var(--rgbWhiteColor), 1);
+    }
+}
+
+.bg-grey-color {
+    background: rgba(var(--rgbBgGreyColor), 1);
+    color: rgba(var(--rgbTextColor1), 1);
+
+    strong {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &.active,
+    &:hover {
+        background: rgba(var(--rgbTextColor1), 1);
+        color: rgba(var(--rgbWhiteColor), 1);
+    }
+}
+
+.bg-grey-color-2 {
+    @extend .bg-grey-color;
+    color: rgba(var(--rgbBgColor), 1);
+
+    strong {
+        text-transform: none;
+        font-weight: 600;
+    }
+}
+
+.bg-grey-color-with-icon {
+    @extend .bg-grey-color-2;
+    padding: 8px 18px 8px 15px;
+}
+
+.health-milestone {
+    &:not(:last-child) {
+        margin-bottom: 6px;
+    }
+
+    @extend .bg-white-color;
+    width: 100%;
+    color: rgba(var(--rgbTextColor), 1);
+    font-weight: 500;
+    line-height: 125%;
+    text-align: left;
+    padding: 10px 12px;
+}
+
+.product-hub-featured-list {
+    @extend .bg-white-color;
+    @include font-size(12);
+    color: rgba(var(--rgbSearchKeyNote), 1);
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.emergency-first-aid-featured-list {
+    @extend .product-hub-featured-list;
+
+    .icons {
+        border-radius: 0;
+
+        &,
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    &:hover {
+        svg {
+            filter: invert(1);
+        }
+    }
+}
+
+.search-widget {
+    background: rgba(var(--rgbDarkBlueColor), 1);
+    color: rgba(var(--rgbWhiteColor), 1);
+
+    &.active,
+    &:hover {
+        background: rgba(var(--rgbWhiteColor), 1);
+        color: rgba(var(--rgbDarkBlueColor), 1);
+    }
+}
+
+.video-guidance {
+    @extend .search-widget;
+}
+
+.footer-green-button {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    justify-content: center;
+    text-transform: uppercase;
+    background: rgba(var(--rgbGreenColor), 1);
+    color: rgba(var(--rgbWhiteColor), 1);
+    padding: 18px 20px;
+}
+
+.footer-white-button {
+    @extend .footer-green-button;
+    background: rgba(var(--rgbWhiteColor), 1);
+    color: rgba(var(--rgbGreenColor), 1);
+}
+
+@media (max-width: 767px) {
+    .default {
+        strong {
+            font-weight: 500;
+        }
+    }
+}

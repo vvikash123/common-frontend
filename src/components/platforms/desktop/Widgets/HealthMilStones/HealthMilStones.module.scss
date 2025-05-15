@@ -1,0 +1,20 @@
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 24px;
+}
+
+.grid-layout {
+  display: flex;
+  gap: 0 24px;
+}
+
+.grid-lhs {
+  flex: 1;
+  min-width: 0;
+}
+
+.grid-rhs {
+  flex: 0 0 300px;
+  width: 300px;
+}

@@ -1,0 +1,123 @@
+// must add this to every component
+@use '@/styles/common/commonClasses/mixin';
+
+.default {
+    display: flex;
+    height: 36px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: rgba(var(--rgbBgColor), 1);
+    color: rgba(var(--rgbWhiteColor), 1);
+    @include mixin.font-size(14);
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.read-more {
+    @extend .default;
+    height: 48px;
+    text-transform: uppercase;
+    padding: 12px;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.share-icon {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    @extend .default;
+    background: rgba(var(--rgbShareBgColor), 1);
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    border-radius: 8px !important;
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.video-lead-story-button {
+    @extend .default;
+    font-weight: 500;
+    background: rgba(var(--rgbBgGreyColor), 1);
+    color: rgba(var(--rgbSearchBoxColor), 1);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.video-load-more {
+    @extend .default;
+    background: rgba(var(--rgbButtonGreyColor), 1);
+    color: rgba(var(--rgbBgColor), 1);
+    padding: 6px 90px;
+    font-weight: bold;
+    height: 46px;
+}
+
+.symptoms-checker-button {
+    @extend .default;
+    background: rgba(var(--rgbDarkCreamColor), 1);
+    color: rgba(var(--rgbWhiteColor), 1);
+    @include mixin.font-size(12);
+    font-weight: 500;
+    line-height: 16.8px;
+}
+
+.check-symptoms-button {
+    @extend .default;
+    background: rgba(var(--rgbTextColor), 1);
+    color: rgba(var(--rgbWhiteColor), 1);
+    font-weight: 600;
+    line-height: 19.6px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    width: 100%;
+    height: 52px;
+}
+
+.showShareButton{
+    display: flex;
+    background: rgba(var(--rgbBgColor), 1);
+    position: absolute;
+    top: -40px;
+    border-radius: 4px;
+    &::after{
+        position: absolute;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid rgba(var(--rgbBgColor), 1);
+        content: "";
+        bottom: -7px;
+        left: 24px;
+    }
+        li{
+        list-style-type: none;
+        padding: 6px 10px 1px;
+        a{
+            display: inline-flex;
+            span{
+                display: block;
+                border-radius: 0;
+                height: 20px;
+                img{
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .symptoms-checker-button {
+        height: auto;
+        padding: 2px 7px;
+        border-radius: 4px;
+    }
+}

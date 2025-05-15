@@ -1,0 +1,86 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.input-box {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    background: rgba(var(--rgbWhiteColor), 1);
+    border-radius: 12px;
+    padding: 8px 15px;
+
+    svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    input,
+    select {
+        background: transparent;
+        flex: 1;
+        border: 0;
+        outline: none;
+        width: 100%;
+        color: rgba(var(--rgbTextColor), 1);
+        @include font-size(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 8px 0;
+
+        &:placeholder-shown {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &::-webkit-input-placeholder {
+            opacity: 0.75;
+        }
+
+        &::-moz-placeholder {
+            opacity: 0.75;
+        }
+
+        &:-ms-input-placeholder {
+            opacity: 0.75;
+        }
+
+        &:-moz-placeholder {
+            opacity: 0.75;
+        }
+    }
+
+    input {
+        padding: 10px 0;
+    }
+}
+
+.default {
+    padding: 0;
+    gap: 0;
+    border-radius: 0;
+}
+
+.search-hamburger {
+    @extend .default;
+}
+
+.newsletter {
+    padding: 5px 15px;
+}
+
+.with-grey-bg {
+    padding: 5px 15px;
+
+    svg {
+        +select {
+            margin-left: -6px;
+        }
+    }
+
+    &,
+    input {
+        background: #F2F4F7;
+    }
+}

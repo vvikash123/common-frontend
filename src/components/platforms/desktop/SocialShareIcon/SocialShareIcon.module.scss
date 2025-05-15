@@ -1,0 +1,16 @@
+.social-widgets{
+  // position: absolute;
+  bottom: 24px;
+  right: 30px;
+  // background: #101116;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  a{
+    margin-left: 10px;
+    [class*='icon-md']{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

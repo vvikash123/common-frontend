@@ -1,0 +1,162 @@
+/* Add your CSS styles for BGWidgetCard here */
+.SearchWidget {
+  width: 100%;
+  background: #E9E9E9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  position: relative;
+  height: 49px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  &.headerSearch{
+    height: 40px;
+    @media screen and (max-width: 900px) {
+      position: absolute;
+      left: 0;
+      top: 61px;
+      width: 94%;
+      right: 0;
+      justify-content: center;
+      margin: auto !important;
+    }
+    .AutoSearch{
+      padding: 10px;
+      top: 47px;
+      .categoriesList{
+        width: 100%;
+      li{
+        a{
+          p{
+            padding: 0 10px;
+          }
+        }
+      }
+      }
+    }
+  }
+  &.whiteBgClass{
+    background-color: #fff;
+  }
+  input {
+    width: 100%;
+    appearance: none;
+    padding: 0 10px;
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+  }
+  button {
+    background-color: #224099;
+    width: 214px;
+    height: 43px;
+    appearance: none;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    right: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 900px) {
+      width: 50px;
+      font-size: 0;
+      text-align: center;
+    }
+    svg{
+      width: 23px;
+      height: 16px;
+      @media screen and (max-width: 900px) {
+        width: 16px;
+      }
+    }
+  }
+  .AutoSearch{
+    position: absolute;
+    left: 0;
+    top: 56px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2392156863);
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    z-index: 1;
+    display: block;
+    .categories{
+      border-bottom: 0.5px solid #ACACAC;
+      display: flex;
+      align-items: center;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      li{
+        list-style-type: none;
+        color: #848484;
+        font-size: 13px;
+        font-weight: 600;
+        margin-right: 30px;
+        cursor: pointer;
+        position: relative;
+        &::after{
+          content: "";
+          position: absolute;
+          background: transparent;
+          height: 2px;
+          left: 0;
+          bottom: -9px;
+          width: 100%;
+        }
+        &.active{
+          color: #224099;
+          &::after{
+            background-color: #224099;
+          }
+        }
+        span{
+          background: #F1F1F1;
+          padding: 2px 9px;
+          border-radius: 5px;
+          margin-left: 2px;
+        }
+      }
+    }
+    .categoriesList{
+      width: 100%;
+      li{
+        list-style-type: none;
+        border-bottom: 0.5px solid #ACACAC;
+        padding: 12px 0;
+        a{
+          display: flex;
+         align-items: center;
+         img{
+          width: 73px;
+          height: 45px;
+          border-radius: 4px;
+          display: block;
+         }
+         p{
+          width: calc(100% - 73px);
+          padding-left: 30px;
+          color: #424242;
+          font-size: 14px;
+          font-weight: 600;
+          @media screen and (max-width:900px) {
+            padding-left: 10px;
+          }
+         }
+         span{
+          color: #224099;
+          font-size: 12px;
+          font-weight: 500;
+         }
+        }
+      }
+    }
+  }
+}

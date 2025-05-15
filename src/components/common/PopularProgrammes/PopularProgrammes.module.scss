@@ -1,0 +1,43 @@
+/* Add your CSS styles for BGWidgetCard here */
+.PopularProgrammes {
+  width: 100%;
+  h3{
+    letter-spacing: -0.5px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 14px;
+    @media screen and (max-width:900px) {
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+  }
+  p{
+    color: #000000;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    @media screen and (max-width:900px) {
+      font-size: 14px;
+      padding-bottom: 10px;
+    }
+    &:last-child{
+      padding: 0;
+    }
+  }
+}
+
+.LoadMore{
+  margin-bottom: 20px;
+  background: #ebebeb;
+  padding: 5px;
+  border-radius: 4px;
+  button{
+    width: 200px;
+    margin: auto;
+    background: #fff;
+    color: #000;
+    box-shadow: none;
+  }
+}

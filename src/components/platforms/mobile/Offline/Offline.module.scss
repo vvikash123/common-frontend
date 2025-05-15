@@ -1,0 +1,71 @@
+.message_tab {
+  color: #ffffff;
+  padding: 10px 5px;
+  .message_sub_tab {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .mess_txt {
+      font-size: 12px;
+      padding-left: 5px;
+      text-align: center;
+      span {
+        display: block;
+      }
+    }
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+.error {
+  background-color: var(--error);
+  max-width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  animation: mymove 2s;
+  animation-fill-mode: forwards;
+  @keyframes mymove {
+    from {
+      top: -40px;
+      opacity: 0.5;
+    }
+    to {
+      top: 0px;
+      opacity: inherit;
+    }
+  }
+  .mess_icon {
+    width: 20px;
+    height: 20px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .mess_anch {
+    text-align: right;
+    width: 18%;
+    a {
+      width: 50px;
+      height: 23px;
+      line-height: 23px;
+      
+      background: #f5f5f5;
+      
+      text-align: center;
+      display: inline-block;
+      font-size: 10px;
+      
+    }
+  }
+  &.sucess {
+    background-color: var(--greeOnline);
+  }
+}

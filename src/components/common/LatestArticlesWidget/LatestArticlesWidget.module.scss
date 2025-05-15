@@ -1,0 +1,59 @@
+/* Add your CSS styles for BGWidgetCard here */
+.ArticlesWidget {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 34px;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 0;
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    max-width: 146px;
+    max-height: 107px;
+    border-radius: 5px;
+    display: block;
+    padding: 0 !important;
+    overflow: hidden;
+
+    img {
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  .Right {
+    width: calc(100% - 146px);
+    padding:0 14px;
+
+    p {
+      color: #224099;
+      font-size: 12px;
+      display: block;
+      padding-bottom: 6px;
+      font-weight: 500;
+      &:empty{
+        display: none;
+      }
+    }
+
+    h3 {
+      letter-spacing: -0.42px;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 24px;
+      @media screen and (max-width: 900px) {
+        -webkit-line-clamp: 2;
+      }
+    }
+  }
+}

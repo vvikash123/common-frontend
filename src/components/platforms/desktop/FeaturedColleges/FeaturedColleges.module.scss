@@ -1,0 +1,25 @@
+
+/* Add your CSS styles for BGWidgetCard here */ 
+.FeaturedColleges{
+  width: 100%;
+  background-color: #fff;
+  padding: 30px 0;
+}
+
+.NoSlider{
+  display: flex;
+  @media screen and (max-width: 900px) {
+    overflow:auto;
+  }
+  >div{
+    width: 100%;
+    display: flex;
+    @media screen and (max-width: 900px) {
+      min-width: 95%;
+    }
+    >div{
+      // width: 30%;
+      margin-right: 10px;
+    }
+  }
+}

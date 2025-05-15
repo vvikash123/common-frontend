@@ -1,0 +1,110 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.d-flex {
+    display: flex;
+}
+
+.link {
+    color: rgba(var(--rgbWhiteColor), 1);
+    @include font-size(14);
+    font-style: normal;
+    letter-spacing: -0.23px;
+    font-weight: 500;
+    line-height: normal;
+    @extend .d-flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 15px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        width: 100%;
+        height: 0.2em;
+        background-color: rgba(var(--rgbWhiteColor), 1);
+        transition: opacity 300ms, transform 300ms;
+        opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+    }
+
+    &.active,
+    &:hover,
+    &:focus {
+        &::after {
+            transform: scale(1);
+        }
+    }
+}
+
+.link-button {
+    @extend .link;
+    color: rgba(var(--rgbTextColor), 1);
+    @include font-size(18);
+    padding-bottom: 10px;
+
+    &::after {
+        height: 0.1em;
+    }
+
+    &.active,
+    &:hover,
+    &:focus {
+        color: rgba(var(--rgbButtonColor), 1);
+
+        &::after {
+            background-color: rgba(var(--rgbButtonColor), 1);
+        }
+    }
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0 9px;
+
+    .link {
+        color: rgba(var(--rgbFooterTextColor), 1);
+        padding-bottom: 0;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    svg {
+        width: 6.6px;
+        height: 11.2px;
+    }
+}
+
+.listing-button {
+    @include font-size(16);
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(var(--rgbButtonColor), 1);
+
+    &,
+    &:hover {
+        color: rgba(var(--rgbBlackColor), 1);
+    }
+
+    &::after {
+        display: none;
+    }
+
+    &.active, &:hover {
+        background: rgba(var(--rgbButtonColor), 1);
+        color: rgba(var(--rgbWhiteColor), 1);
+    }
+}
+
+@media (max-width: 767px) {
+    .link-button {
+        @include font-size(16);
+        letter-spacing: -0.27px;
+    }
+}

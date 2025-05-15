@@ -1,0 +1,59 @@
+
+.Topconditions{
+    width: 100%;
+    margin-bottom: 20px;
+    .Heading{
+      opacity: 0.6;
+      color: rgba(15, 47, 79, 1);
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      svg{
+        width: 15px;
+        margin-right: 10px;
+      }
+    }
+    ul{
+      display: flex;
+      list-style-type: none;
+      flex-wrap: wrap;
+      li{
+        width: calc(50% - 8px);
+        background: rgba(var(--rgbBgGreyColor), 1);
+        margin: 0 5px 6px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background: rgba(var(--rgbTextColor1), 1);
+          a{
+            color: rgba(var(--rgbWhiteColor), 1);
+          }
+      }
+        &:nth-child(odd){
+          margin-left: 0;
+        }
+        &:nth-child(even){
+          margin-right: 0;
+        }
+        &:nth-last-child(-n + 2){
+          margin-bottom: 0;
+        }
+        a{
+          color: rgba(var(--rgbBgColor), 1);
+          font-size: 14px;
+          font-weight: 600;
+          text-align: center;
+          padding: 11px 0;
+          display: block;
+        }
+      }
+    }
+  }
+  
+  
+  

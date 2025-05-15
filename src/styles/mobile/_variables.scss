@@ -1,0 +1,60 @@
+@import '../common/fontFamily.scss';
+
+@mixin lightMode() {
+  --containerSize: 1120px;
+  // font family
+  --fontFamily: 'Manrope';
+
+  // rgb colors
+  --rgbSkyBlueColor: 129, 149, 255; // #8195FF
+  --rgbDarkBlueColor: 35, 41, 60; // #23293C
+  --rgbLightBlueColor: 144, 159, 205; // #909FCD
+  --rgbGreyBorder: 239, 240, 244; // #EFF0F4
+  --rgbDarkGreenColor: 111, 130, 149; // #6F8295
+  --rgbTextColor: 15, 47, 79; // #0F2F4F
+  --rgbTextColor1: 0, 39, 78; // #00274E
+  --rgbBgColor: 33, 64, 154; // #21409A
+  --rgbWhiteColor: 255, 255, 255; // #FFFFFF
+  --rgbBlackColor: 0, 0, 0; // #000000
+  --rgbGreenColor: 15, 170, 105; // #0FAA69
+  --rgbSearchKeyNote: 88, 100, 137; // #586489
+  --rgbGreenColor1: 3, 98, 58; // #03623A
+  --rgbBgGreyColor: 245, 245, 248; // #F5F5F8
+  --rgbGreyColor: 244, 245, 250; // #F4F5FA
+  --rgbGreyColor1: 235, 238, 250; // #EBEEFA
+  --rgbButtonGreyColor: 241, 242, 246; // #F1F2F6
+  --rgbGreenLightColor: 242, 247, 243; // #f2f7f3
+  --rgbGreenLightColor1: 235, 247, 242; // #EBF7F2
+  --rgbBlueColor: 31, 76, 205; // #1F4CCD
+  --rgbShareBgColor: 240, 240, 243; // #F0F0F3
+  --rgbSlateColor: 82, 105, 129; // #526981
+  --rgbBorderColor: 225, 228, 233; // #E1E4E9
+  --rgbSearchBoxColor: 20, 26, 44; // #141A2C
+  --rgbBorderColor1: 224, 224, 224; // #e0e0e0
+  --rgbNewsLetterBgColor: 76, 100, 224; // #4C64E0
+  --rgbNewsLetterBgColor1: 55, 74, 178; // #374AB2
+  --rgbNewsLetterGreenColor: 32, 193, 126; // #20C17E
+  --rgbNewsLetterCreamColor: 218, 152, 122; // #DA987A
+  --rgbBredcrumbArrowColor: 135, 151, 167; // #8797A7
+  --rgbCreamColor: 248, 211, 194; // #F8D3C2
+  --rgbDarkCreamColor: 227, 112, 59; // #E3703B
+  --rgbFooterBgColor: 1, 27, 52; // #011B34
+}
+
+// @mixin darkMode() {
+//   background-color: #1c1c1e;
+// }
+
+:root {
+  @include lightMode();
+}
+
+// body[data-theme='dark'] {
+//   @include darkMode();
+// }
+
+// body[data-theme='light'],
+// body[data-theme='null'],
+// body[data-theme=''] {
+//   @extend :root;
+// }

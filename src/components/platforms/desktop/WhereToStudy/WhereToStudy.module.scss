@@ -1,0 +1,57 @@
+/* Add your CSS styles for BGWidgetCard here */
+.WhereToStudy {
+  width: 100%;
+  background-color: #fff;
+  padding: 30px 0 50px;
+  background-image: url(/assets/icons/education/CityBg.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 50%;
+  .WhereToStudyTop {
+    width: 100%;
+    text-align: center;
+    h3 {
+      letter-spacing: -0.93px;
+      color: #000000;
+      font-size: 30px;
+      font-weight: bold;
+      display: block;
+      padding-bottom: 10px;
+    }
+    p {
+      color: #000000;
+      font-size: 20px;
+      line-height: 30px;
+      width: 370px;
+      margin: auto;
+      font-weight: normal;
+    }
+  }
+}
+.SearchWidget {
+  max-width:100%;
+  margin: auto;
+  background: #E9E9E9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 5px;
+  position: relative;
+  height: 49px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  max-width: 650px;
+  margin: 40px auto;
+  &.whiteBgClass{
+    background-color: #fff;
+  }
+ 
+}
+.adsection{
+  margin: 50px 0 0;
+  width: 100%;
+  img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+}

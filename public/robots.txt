@@ -1,0 +1,42 @@
+User-agent: *
+Disallow: /presite
+Disallow: /test-section/
+Disallow: /embed/
+Disallow: /search-result/
+
+#Sitemaps
+Sitemap: https://www.unilist.in/feeds/google-news-sitemap-en.xml
+
+
+#Baiduspider
+User-agent: Baiduspider
+Disallow: /
+
+#Yandex
+User-agent: Yandex
+Disallow: /
+
+#Facebook
+User-agent: facebookexternalhit/1.1
+Disallow:
+
+User-agent: DataForSeoBot
+Disallow: /
+ 
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+ 
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /

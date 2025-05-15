@@ -1,0 +1,11 @@
+.body-pannel {
+    +.ads-body {
+        margin-top: 20px;
+    }
+}
+
+.ads-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

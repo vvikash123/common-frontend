@@ -1,0 +1,139 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), #EFF0F4;
+}
+
+.figcaption {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 16px;
+    min-height: 190px;
+}
+
+.product-logo {
+    margin-bottom: 6px;
+
+    img {
+        width: auto;
+        height: 24px;
+    }
+}
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    gap: 0 4px;
+    align-items: center;
+}
+
+.position-relative {
+    position: relative;
+    display: flex;
+}
+
+.duration {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: rgba(var(--rgbBlackColor), 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .time {
+        color: rgba(255, 255, 255, 1);
+        @include font-size(14);
+        font-weight: 400;
+        line-height: 19.6px;
+    }
+}
+
+.vertical-image {
+    @extend .figure;
+}
+
+.seasonal-health-care {
+    @extend .figure;
+    background: rgba(var(--rgbWhiteColor), 1);
+
+    .figcaption {
+        min-height: auto;
+    }
+}
+
+.v-month-picks {
+    @extend .figure;
+    background: none;
+
+    .figcaption {
+        padding: 16px 0 0 0;
+        min-height: auto;
+    }
+}
+
+.health-milestone {
+    @extend .figure;
+    background: rgba(var(--rgbGreyColor1), 1);
+}
+
+.product-hub-widget {
+    @extend .seasonal-health-care;
+    background: rgba(var(--rgbGreyColor1), 1);
+
+    .figcaption {
+        .product-logo {
+            +p+p {
+                padding-top: 10px;
+                border-top: 1px solid rgba(var(--rgbSearchKeyNote), 0.1);
+            }
+        }
+    }
+
+}
+
+.video-card {
+    @extend .figure;
+    background: none;
+    border-radius: 0;
+
+    .figcaption {
+        padding: 16px 0 0 0;
+        min-height: auto;
+    }
+}
+
+.video-lead-card {
+    @extend .video-card;
+
+    .figcaption {
+        padding: 0;
+    }
+}
+
+.video-card-up-next {
+    @extend .video-card;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .figure {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .figcaption {
+        min-height: 145px;
+    }
+}

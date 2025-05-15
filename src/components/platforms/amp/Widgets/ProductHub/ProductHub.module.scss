@@ -1,0 +1,7 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.ProductHub {
+  background-size: cover;
+  margin-top: 60px;
+}

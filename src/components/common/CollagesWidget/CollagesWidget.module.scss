@@ -1,0 +1,367 @@
+
+/* Add your CSS styles for BGWidgetCard here */ 
+
+.CollagesWidget {
+  box-shadow: 0px 3px 12px #00000014;
+  border: 0.3px solid #B5B5B5;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 900px) {
+   margin: 0;
+   margin-bottom: 15px;
+  }
+  &.grid-3{
+    width: 100%;
+    .Top {
+      padding: 10px;
+      display: block;
+      min-height: 94px;
+      i{
+        display: none;
+      }
+      .left {
+      h2{
+        font-size: 16px;
+        padding-bottom: 4px;
+        min-height: 84px;
+        a{
+          
+        }
+      }
+      span{
+        font-size: 12px;
+        padding-bottom: 4px;
+       
+      }
+    }
+    .right {
+      p{
+        font-size: 12px;
+      }
+    }
+    }
+    .CollagesInfo {
+      display: block;
+      padding: 10px;
+      p{
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      ul.Fees {
+        flex-wrap: wrap;
+        min-height: 107px;
+        li{
+          width: 50%;
+          font-size: 12px;
+          list-style-type: none;
+          strong{
+            display: block;
+            padding-top: 2px;
+          }
+        }
+      }
+      ul.Info {
+        flex-wrap: wrap;
+        margin: 0 0 10px;
+        li{
+          width: 50%;
+          list-style-type: none;
+          padding: 0 0 5px 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &.grid-1{
+    .Top {
+      padding: 10px 17px;
+      position: relative;
+      align-items: flex-start;
+      .left {
+        h2{
+          font-size: 16px;
+          padding-bottom: 4px;
+        }
+        span{
+          font-size: 12px;
+          padding-bottom: 4px;
+          font-weight: 500;
+        }
+      }
+    }
+    .CollagesInfo {
+      padding: 10px;
+      ul.Fees {
+        li{
+          font-size: 14px;
+        
+        }
+      }
+
+      ul.Info {
+        flex-wrap: wrap;
+        margin: 10px 0 10px;
+        li{
+          font-size: 12px;
+        }
+      }
+      
+    }
+  }
+  .Top {
+    display: flex;
+    align-items: center;
+    background:rgba(34, 64, 154, 0.031372549) 0% 0% no-repeat padding-box;
+    border-radius: 5px 5px 0px 0px;
+    padding: 20px 50px;
+    justify-content: space-between;
+    border-bottom: 1px solid #D9D9D9;
+    position: relative;
+    @media screen and (max-width: 900px) {
+      padding: 10px;
+      display: block;
+      position: relative;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      i {
+        border: 1px solid #D9D9D9;
+        min-width: 110px;
+        height: 54px;
+        max-width: 110px;
+        border-radius: 4px;
+        margin-right: 18px;
+        overflow: hidden;
+       span{
+        display: block;
+        padding: 3px !important;
+        height: 100%;
+        background: #fff;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+       }
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+
+      h2 {
+        color: #000000;
+        font-size: 18px;
+        font-weight: bold;
+        @media screen and (max-width: 900px) {
+          margin-bottom: 20px;
+        }
+      }
+
+      span {
+        color: #000000;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        @media screen and (max-width: 900px) {
+          font-size: 16px;
+          margin: 6px 0;
+        }
+        svg{
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      @media screen and (max-width: 900px) {
+        position: absolute;
+        right: 6px;
+        display: block;
+        bottom: 6px;
+        white-space: normal;
+      }
+     > p {
+        color: #000000;
+        font-size: 15px;
+        font-weight: 600;
+        padding-right: 10px;
+        border-right: 0.5px solid rgba(5, 0, 56, 0.2);
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        svg{
+          width: 18px;
+          height: 18px;
+          margin-left: 7px;
+          margin-top: 5px;
+          cursor: pointer;
+        }
+        @media screen and (max-width: 900px) {
+          margin: 0;
+          border: 0;
+          padding: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+          border: 0;
+          margin-right: 0;
+        }
+
+        strong {
+          color: #224099;
+          font-weight: 800;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+
+  .CollagesInfo {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 900px) {
+      padding: 10px;
+      display: block;
+    }
+    p {
+      color: #000000;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    ul.Fees {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        // width: 50%;
+        color: #000000;
+        font-size: 16px;
+        font-weight: normal;
+        list-style-type: none;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        @media screen and (max-width: 900px) {
+          width: calc(50% - 18px);
+        }
+        strong{
+          @media screen and (max-width: 900px) {
+            display: block;
+            padding-top: 4px;
+          }
+        }
+      }
+    }
+
+    ul.Info {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      @media screen and (max-width: 900px) {
+        margin: 10px 0;
+      }
+      li {
+        color: #3F9BFC;
+        font-size: 14px;
+        font-weight: 600;
+        padding-right: 40px;
+        list-style-type: none;
+        a{
+          color: #3F9BFC;
+        }
+        @media screen and (max-width: 900px) {
+          width: 50%;
+          padding-bottom: 7px;
+        }
+      }
+    }
+
+  }
+}
+
+.marginBottom{
+  @media screen and (max-width: 900px) {
+  margin-bottom: 20px;
+  }
+}
+
+.ExamsAccepted {
+  position: relative;
+  cursor: pointer;
+}
+
+.Tooltip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 10;
+  width: max-content;
+  white-space: nowrap;
+}
+.ExamsAccepted{
+  strong{
+    span{
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.ExamsAccepted {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.Tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 10;
+  width: max-content;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  @media screen and (max-width: 900px) {
+    max-width: 200px;
+    white-space: normal;
+    left: 0;
+    transform: none;
+  }
+}
+
+.ExamsAccepted:hover .Tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ExamsAccepted:focus-within .Tooltip {
+  opacity: 1;
+  visibility: visible;
+}

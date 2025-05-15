@@ -1,0 +1,104 @@
+// must add this to every component
+@use '@/styles/common/commonClasses/mixin';
+
+.articleNotification{
+    width: 100%;
+    border-radius: 12px;
+    background-color: rgba(15, 170, 105, 1);
+    padding: 20px;
+    position: sticky;
+    top: 110px;
+    margin-top: 20px;
+    overflow: hidden;
+    .circleIcon{
+        position: absolute;
+        background-color: #fff;
+        width: 52px;
+        height: 53px;
+        border-radius: 100px;
+        left: 7px;
+        top: 15px;
+        background-image: url(/assets/icons/svg/bellIcon.png);
+        background-size: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 116px;
+        height: 116px;
+        background: #000;
+        border-radius: 100%;
+        left: -27px;
+        top: -19px;
+        opacity: 0.1;
+        animation: pulseAfter 2s infinite;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 84px;
+        height: 84px;
+        background: #000;
+        border-radius: 100%;
+        left: -10px;
+        top: -2px;
+        opacity: 0.2;
+        animation: pulseBefore 2s infinite;
+    }
+    @media only screen and (max-width: 900px) {
+        position: static;
+        margin-bottom: 20px;
+    }
+    p{
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 0 0 24px 90px;
+        strong{
+            font-weight: 900;
+        }
+    }
+    button{
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 1);
+      width: 100%;
+      text-align: center;
+      height: 36px;
+      color: rgba(33, 64, 154, 1);
+      font-size: 14px;
+      font-weight: 700;      
+    }
+}
+
+@keyframes pulseAfter {
+    0% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+}
+
+@keyframes pulseBefore {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+}

@@ -1,0 +1,49 @@
+.tnn__details-user-profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    @media only screen and (max-width: 767px) {
+        padding: 20px 15px;
+        justify-content: flex-start;
+    }
+    .author_row{
+       display: flex;
+       font-size: 0.875rem;
+       align-items: center;
+       @media only screen and (max-width: 767px) {
+        display: block;
+       }
+       span{
+        color: #fff;
+       }
+       p{
+        color: rgba(255, 255, 255, 0.5);
+        margin-left: 10px;
+        @media only screen and (max-width: 767px) {
+            margin: 0;
+            font-size: 12px;
+            padding-top: 5px;
+        }
+       }
+    }
+    img{
+        width: 34px;
+        border-radius: 100px;
+        margin-right: 10px;
+        background: #fff;
+        max-width: 34px;
+        max-height: 34px;
+        display: flex;
+        align-items: center;
+        padding:2px;
+    }
+  }
+
+
+.social-widgets{
+    svg{
+        width: 30px;
+        height: 30px;
+    }
+}

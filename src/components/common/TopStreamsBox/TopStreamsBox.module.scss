@@ -1,0 +1,38 @@
+
+/* Add your CSS styles for BGWidgetCard here */ 
+.TopStreamsBox{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 164px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  i{
+    margin-bottom: 14px;
+    display: block;
+    img{
+      display: block;
+      margin: auto;
+    }
+  }
+  h3{
+    font-weight: 500;
+  }
+  &:hover{
+    box-shadow: 0px 3px 6px #0000005E;
+    background-color: #224099;
+    h3{
+      color: #fff;
+      font-weight: bold;
+    }
+    i{
+      -webkit-filter: invert(100%);
+       filter: invert(100%);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.SeasonalHealthCare {
+  background-size: cover;
+  margin-top: 60px;
+}
+
+.grid-layout {
+  display: flex;
+  gap: 0 24px;
+}
+
+.grid-lhs {
+  flex: 1;
+  min-width: 0;
+}
+
+.grid-rhs {
+  flex: 0 0 300px;
+  width: 300px;
+}

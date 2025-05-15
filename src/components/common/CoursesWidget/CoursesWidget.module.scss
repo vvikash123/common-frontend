@@ -1,0 +1,81 @@
+/* Add your CSS styles for BGWidgetCard here */
+.CoursesWidget {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 17px 19px #0000000D;
+  border: 1px solid #CECECE;
+  border-radius: 5px;
+  color: #000000;
+  padding: 13px 12px 0;  
+  .CoursesWidgetRow{
+    // min-height: 230px;
+    // max-height: 250px;
+    height: calc(100% + -50px);
+  }
+  h4{
+    font-size: 18px;
+    display: block;
+    padding-bottom: 10px;
+    font-weight:bold;
+  }
+  p{
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #CECECE;
+    padding-bottom: 8px;
+  }
+  span{
+    color: #929292;
+    font-size: 9px;
+    padding: 10px 0;
+    display: block;
+    font-weight: 500;
+    strong{
+      display: block;
+      font-size: 12px;
+      font-weight: bold;
+      color: #000;
+      min-height: 40px;
+      padding-top: 3px;
+      @media screen and (max-width:900px) {
+        min-height: auto;
+      }
+    }
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #CECECE;
+    padding: 8px 0 12px;
+    li{
+      list-style: none;
+      border-right: 1px solid #CECECE;
+      padding: 0 9px;
+      &:last-child{
+        padding-right: 0;
+        border: 0;
+      }
+      &:first-child{
+        padding-left: 0;
+      }
+      span{
+        padding: 0;
+      }
+      strong{
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+  button{
+    width: calc(100% + 24px);
+    margin: 0 -12px;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.Accepted{
+  min-height: 87px;
+  @media screen and (max-width:900px) {
+    min-height: auto;
+  }
+}

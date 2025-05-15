@@ -1,0 +1,64 @@
+div.atfAd {
+    padding-bottom: 15px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    z-index: 99;
+    text-align: center;
+    transition: all ease-in-out 0.5s;
+    .bottomStickyAd {
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      height: 260px;
+      max-height: 282px;
+      z-index: 2;
+      align-items: center;
+      & > [id*='google_ads_iframe'] {
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+  .ads-title {
+    &::before {
+      content: 'ADVERTISEMENT';
+      font-size: 12px;
+      line-height: 1;
+      color: #000;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      margin-top: -7px;
+      z-index: 1;
+      left: 0;
+    }
+  }
+  .closeAdsBtn {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    border-radius: 12px 0 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .hideAds {
+    transform: translateY(100px);
+    transition: all ease-in-out 0.5s;
+  }
+
+  .h1Heading{
+    font-size: 2rem;
+    color: rgba(var(--rgbTextColor), 1);
+    padding: 10px 0;
+  }

@@ -1,0 +1,20 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.FooterForm {
+    padding: 20px;
+    border-radius: 0px 0px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    background: #CAE9DC;
+    margin-top: auto;
+    margin: auto -20px -20px -20px;
+    gap: 15px 0;
+}
+
+@media (max-width: 767px) {
+    .FooterForm {
+        padding: 16px;
+        margin: auto -16px -16px -16px;
+    }
+}

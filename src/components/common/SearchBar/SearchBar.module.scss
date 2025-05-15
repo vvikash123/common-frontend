@@ -1,0 +1,14 @@
+.search-box {
+    background-color: rgba(var(--rgbSearchBoxColor), 1);
+    background-image: url(/assets/icons/health/lead-bg.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+    .search-box {
+        padding: 30px 16px;
+    }
+}

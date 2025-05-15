@@ -1,0 +1,30 @@
+/* Add your CSS styles for BGWidgetCard here */
+.author {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  &.highlighted{
+    color: #000;
+    span{
+      display: block;
+      padding-left: 0;
+      font-weight: normal;
+    }
+  }
+  i {
+    width: 34px;
+    height: 34px;
+    border-radius: 100px;
+    overflow: hidden;
+    background-color: red;
+  }
+  strong{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px;
+    span{
+      font-size: 12px;
+      padding-left:8px;
+    }
+  }
+}

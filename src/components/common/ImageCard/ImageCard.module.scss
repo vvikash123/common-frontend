@@ -1,0 +1,74 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.image-con {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &,
+    & img {
+        aspect-ratio: 16/9;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.2s;
+        background: #f9f9f9;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.default {
+    border-radius: 8px;
+}
+
+.horizontal-image {
+    border-radius: 12px 40px 12px 12px;
+}
+
+.vertical-image {
+    border-radius: 12px 12px 0px 0px;
+}
+
+.month-picks {
+    border-radius: 12px 0 0 12px;
+    height: 115px;
+}
+
+.v-month-picks {
+    border-radius: 12px;
+}
+
+.list-card {
+    @extend .default;
+    height: 78px;
+}
+
+.health-milestone {
+    height: 135px;
+    margin-top: auto;
+}
+
+.video-card {
+    @extend .v-month-picks;
+}
+
+.trending-topics-widget {
+    @extend .horizontal-image;
+}
+
+@media (max-width: 767px) {
+    .image-con {
+        img {
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}

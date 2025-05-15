@@ -1,0 +1,29 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.grid-layout {
+    display: flex;
+    grid-gap: 0 24px;
+}
+
+.grid-lhs {
+    flex: 1;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-gap: 20px 24px;
+}
+
+.grid-col {
+    &:first-child {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+}
+
+.grid-rhs {
+    flex: 0 0 300px;
+    width: 300px;
+}

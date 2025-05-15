@@ -1,0 +1,156 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.letterbox {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 500px;
+    &:hover{
+        .topbox_cover {
+            margin-bottom: 0px;
+           }
+    }
+    .topbox_cover {
+        margin: 0px 12px;
+        height: 360px;
+        margin-bottom: -50px;
+        transition: all 0.4s ease;
+
+        &:hover {
+            margin-bottom: 0px;
+        }
+
+        .letterbox_top {
+            background: rgba(76, 100, 224, 1);
+            background-image: url(/assets/health-images/images/newsletter-bg.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 10px 10px 0px 0px;
+
+            .radial-gradient {
+                padding: 25px 15px;
+                text-align: center;
+
+                span,
+                h4,
+                p {
+                    color: rgba(var(--rgbWhiteColor), 1);
+                }
+
+                span {
+                    font-weight: 700;
+                    @include font-size(12);
+                    text-transform: uppercase;
+                }
+
+                h4 {
+                    margin: 20px 0px;
+                    line-height: 35px;
+                    font-weight: 800;
+                    @include font-size(28);
+                }
+
+                p {
+                    line-height: 19px;
+                    font-weight: 400;
+                    @include font-size(14);
+
+                    strong {
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+
+        .letterbox_mid {
+            background: rgba(var(--rgbNewsLetterBgColor1), 1);
+            height: 223px;
+            padding: 20px;
+
+            button {
+                background: rgba(var(--rgbNewsLetterGreenColor), 1);
+                width: 100%;
+                padding: 15px 20px;
+                text-align: center;
+                text-transform: uppercase;
+                color: rgba(var(--rgbWhiteColor), 1);
+                @include font-size(14);
+                font-weight: 700;
+                margin-top: 10px;
+            }
+
+            input,
+            button {
+                border: 0px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .letter_cover-box,
+    .letter_cover-box-front {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .letter_cover-box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 90px;
+        z-index: -1;
+        width: 100%;
+        padding: 0;
+        span{
+            display: block;
+        }
+    }
+
+    .letter_cover-box-front {
+        position: relative;
+        z-index: 2;
+
+        span {
+            color: #DA987A;
+            @include font-size(14);
+            font-weight: 700;
+            text-align: center;
+            display: block;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 0px 0px 10px 10px;
+            overflow: hidden;
+        }
+
+        p {
+            color: #DA987A;
+            @include font-size(14);
+            font-weight: 700;
+            text-align: center;
+            display: block;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .letterbox {
+        height: auto;
+
+        .topbox_cover {
+            margin-bottom: 0;
+        }
+    }
+}

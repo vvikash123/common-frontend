@@ -1,0 +1,95 @@
+.NaacData{
+  min-width: 572px;
+  height: 73px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2392156863);
+  border-radius: 5px;
+  display: flex;
+  position: absolute;
+  top: 160px;
+  z-index: 9999;
+  &.CollageNaacdata{
+    top: 70px;
+    right: 20px;
+    @media screen and (max-width:900px) {
+      top: 130px;
+    }
+  }
+  @media screen and (max-width:900px) {
+    right: 40px;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    top: 230px;
+    min-width: 70%;
+  }
+.Close{
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  right: -10px;
+  top: -10px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  line-height: 20px;
+}
+.NaacDataRow{
+  // flex: 1;
+  text-align: center;
+  border-right: 1px solid #E3E3E3;
+  overflow: hidden;
+  @media screen and (max-width:900px) {
+    display: flex;
+    align-items: center;
+    background-color: #E8E8E8;
+    border-bottom: 1px solid #c3bdbd;
+  }
+  &:nth-child(2){
+    border-radius: 5px 0 0  0;
+  }
+  &:last-child{
+    border: 0;
+  }
+  span{
+    background-color: #E8E8E8;
+    color: #224099;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    padding: 6px 10px;
+    @media screen and (max-width:900px) {
+      width: 65%;
+      white-space: normal;
+      display: flex;
+      align-items: center;
+      text-align: left;
+    
+    }
+  }
+  p{
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 0 13px;
+    @media screen and (max-width:900px) {
+      justify-content: center;
+      width: 35%;
+      background-color: #fff;
+      border-left: 1px solid #c3bdbd;
+      padding: 0 10px;
+    }
+  }
+}
+}

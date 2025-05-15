@@ -1,0 +1,43 @@
+/* components/Pagination.module.css */
+.pagination {
+    width: 100%;
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li{
+        list-style-type: none;
+        color: #929292;
+        font-size: 13px;
+        font-weight: bold;
+        margin: 0 10px;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        svg{
+          width: 11px;
+          height: 10px;
+          margin: auto;
+        }
+        a{
+          width: 45px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100px;
+          color: #acacac;
+          &.next{
+           background-color: #224099;
+           color: #fff;
+          }
+          &.active{
+            box-shadow: 0px 2px 13px #00000029;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,306 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+
+.figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), #EFF0F4;
+    width: 100%;
+    span{
+        display: block;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    &.trendingExtraCl{
+        .figcaption {
+            min-height: 130px;
+        }
+    }
+}
+
+.figcaption {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 16px;
+    min-height: 160px;
+}
+
+.product-logo {
+    margin-bottom: 6px;
+
+    img {
+        width: auto;
+        height: 24px;
+    }
+}
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    gap: 0 4px;
+    align-items: center;
+}
+
+.position-relative {
+    position: relative;
+    display: flex;
+  
+}
+
+.duration {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: rgba(var(--rgbBlackColor), 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .time {
+        color: rgba(255, 255, 255, 1);
+        @include font-size(14);
+        font-weight: 400;
+        line-height: 19.6px;
+    }
+}
+
+.vertical-image {
+    @extend .figure;
+    span{
+        display: block;
+        border-radius: 12px 12px 0px 0px;
+        overflow: hidden;
+    }
+}
+
+.seasonal-health-care {
+    // @extend .figure;
+    background: rgba(var(--rgbWhiteColor), 1);
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 12px;
+    overflow: hidden;
+    // background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), #EFF0F4;
+    width: 100%;
+    span{
+        display: block;
+        border-radius: 12px 12px 0px 0px;
+        overflow: hidden;
+    }
+
+    .figcaption {
+        // min-height: auto;
+    }
+}
+
+.v-month-picks {
+    @extend .figure;
+    background: none;
+
+    .figcaption {
+        padding: 16px 0 0 0;
+        min-height: auto;
+    }
+}
+
+.health-milestone {
+    @extend .figure;
+    background: rgba(var(--rgbGreyColor1), 1);
+    span{
+        display: block;
+        border-radius: 0px 0px 0px 0px;
+        overflow: hidden;
+    }
+}
+
+.product-hub-widget {
+    @extend .seasonal-health-care;
+    background: rgba(var(--rgbGreyColor1), 1);
+
+    .figcaption {
+        .product-logo {
+            +p+p {
+                padding-top: 10px;
+                border-top: 1px solid rgba(var(--rgbSearchKeyNote), 0.1);
+            }
+        }
+    }
+
+}
+
+.video-card {
+    @extend .figure;
+    background: none;
+    border-radius: 0;
+
+    .figcaption {
+        padding: 16px 0 0 0;
+        min-height: auto;
+    }
+}
+
+.video-lead-card {
+    @extend .video-card;
+
+    .figcaption {
+        padding: 0;
+        position: absolute;
+        left: 12%;
+        z-index: 10;
+        top: 10%;
+        // &.active{
+        //   display: none;
+        //     &::after{
+        //        display: none;
+        //     }
+           
+        // }
+        @media (max-width: 767px) {
+            position: static;
+            order: 2;
+            padding-top: 20px;
+            transform: none;
+        }
+    }
+}
+
+.video-card-up-next {
+    @extend .video-card;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .figure {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .figcaption {
+        min-height: 145px;
+    }
+}
+.IconRow{
+    position: relative;
+.Icon{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    background-color: rgba(var(--rgbBgColor), 1);
+    display: block;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    &:empty{
+        display: none;
+    }
+    &.article{
+        background-image: url(/assets/icons/health/article-icon.svg);
+        background-size: 14px;
+    }
+    &.photo{
+        background-image: url(/assets/icons/health/photo-icon.svg);
+    }
+    &.videoss{
+        background-image: url(/assets/icons/health/video-icon.svg);
+        background-size: 13px;
+    }
+    &.web-stories{
+        background-image: url(/assets/icons/health/web-stories-icon.svg);
+    }
+}
+}
+
+.video-Hover{
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    bottom: 20px;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    transition: opacity 1s;
+    padding-left: 12%; 
+    .video-Row{
+      max-width: 240px;
+      min-width: 240px;
+      margin-right: 8px;
+      padding: 10px;
+      cursor: pointer;
+      .video-Row-img{
+        position: relative;
+        margin-bottom: 10px;
+        span{
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          padding: 5px 10px;
+          border-radius: 4px;
+          background: rgba(var(--rgbBlackColor), 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: rgb(255, 255, 255);
+          font-size: 0.875rem;
+          font-weight: 400;
+          line-height: 19.6px;
+          &::after{
+            display: none;
+          }
+        }
+      img{
+        width: 100%;
+        display: block;
+        height: 146px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+    .Intro{
+        display: flex;
+        align-items: flex-start;
+        svg{
+            flex: 0 0 36px;
+            width: 32px;
+            height: 32px;
+            margin-right: 10px;
+          }
+          h2{
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            line-height: 22.4px;
+            font-weight: 800;
+            color: rgba(var(--rgbWhiteColor), 1);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+          }
+    }
+     
+    }
+  }
+  
+  .tnn_video-Top{
+    position: relative;
+    &:hover{
+      .video-Hover{
+         bottom: 0;
+         z-index: 9;
+         opacity: 1;
+       }
+    }
+  }

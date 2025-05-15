@@ -1,0 +1,19 @@
+// must add this to every component
+@import 'styles/common/commonClasses/mixin';
+
+.default {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    display: flex;
+    gap: 0 4px;
+    align-items: center;
+
+    svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,26 @@
+// must add this to every component
+@import '@/styles/common/commonClasses/mixin';
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-gap: 0 24px;
+}
+
+.pagination {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}

@@ -1,0 +1,54 @@
+@mixin font-size($i) {
+    font-size: $i * 0.0625rem;
+}
+
+@mixin lineClamp($lineNumber) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lineNumber;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin m-($i) {
+    margin: $i * 1px;
+}
+
+@mixin mt-($i) {
+    margin-top: $i * 1px;
+}
+
+@mixin mb-($i) {
+    margin-bottom: $i * 1px;
+}
+
+@mixin mx-($i) {
+    margin-left: $i * 1px;
+    margin-right: $i * 1px;
+}
+
+@mixin my-($i) {
+    margin-top: $i * 1px;
+    margin-bottom: $i * 1px;
+}
+
+@mixin p-($i) {
+    margin: $i * 1px;
+}
+
+@mixin pt-($i) {
+    margin-top: $i * 1px;
+}
+
+@mixin pb-($i) {
+    margin-bottom: $i * 1px;
+}
+
+@mixin px-($i) {
+    margin-left: $i * 1px;
+    margin-right: $i * 1px;
+}
+
+@mixin py-($i) {
+    margin-top: $i * 1px;
+    margin-bottom: $i * 1px;
+}

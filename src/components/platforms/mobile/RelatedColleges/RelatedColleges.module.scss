@@ -1,0 +1,37 @@
+
+/* Add your CSS styles for BGWidgetCard here */ 
+.TopManagementColleges{
+  width: 100%;
+  padding: 30px 0;
+  border-top: 10px #224099 solid;
+}
+
+.TotalColleges{
+  color: #224099;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.RelatedColleges2{
+  box-shadow: 0px 2px 13px #00000029;
+  padding: 20px 20px 0;
+  border-radius: 5px;
+  border: 1px solid #D5D5D5;
+  margin-bottom: 30px;
+}
+
+
+.TotalCollegesSldier{
+  display: flex;
+  overflow: auto;
+  width: calc(100% + 20px);
+  
+  &:nth-child(2){
+    div{
+      min-width: 84%;
+      margin-right: 15px;
+    }
+  }
+}

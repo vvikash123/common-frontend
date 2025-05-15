@@ -1,0 +1,83 @@
+/* Add your CSS styles for BGWidgetCard here */
+.rhsWidget {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #D5D5D5;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  width: 100%;
+  .rhsWidgetTop {
+    background:rgba(34, 64, 154, 0.031372549) 0% 0% no-repeat padding-box;
+    width: 100%;
+    padding: 15px 10px;
+    display: flex;
+    align-items: flex-start;
+    i {
+      min-width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      svg{
+        width: 54px;
+        height: 54px;
+      }
+    }
+    p {
+      color: #000000;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: bold;
+      span {
+        display: block;
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+  }
+  .notifications {
+    width: 100%;
+    li {
+      padding: 9px 20px;
+      border-bottom: 1px solid #D5D5D5;
+      position: relative;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        color: #000;
+      }
+
+      &:after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        display: block;
+        position: absolute;
+        background: #000;
+        left: 10px;
+        top: 17px;
+        border-radius: 100px;
+      }
+    }
+  }
+  .BtnRow{
+    width: 100%;
+    padding: 15px;
+    .btn {
+      background: #224099 0% 0% no-repeat padding-box;
+      box-shadow: 0px 5px 4px #00000029;
+      border-radius: 5px;
+      width: 100%;
+      border: 0;
+      appearance: none;
+      height: 41px;
+      color: #FFFFFF;
+      font-size: 13px;
+      cursor: pointer;
+      display: block;
+      line-height: 41px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.RelatesTopics{
+    width: 100%;
+    .Heading{
+      opacity: 0.6;
+      color: rgba(15, 47, 79, 1);
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    ul{
+      list-style-type: none;
+      li{
+        width:100%;
+        background: rgba(var(--rgbBgGreyColor), 1);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 12px;
+        >a{
+          color: rgba(var(--rgbBgColor), 1);
+          font-size: 16px;
+          font-weight: 900;
+          display: block;
+        }
+        span{
+          font-size: 12px;
+          color: #586489;
+          padding: 10px 0 0 0;
+          display: flex;
+          align-items: center;     
+        svg{
+            width: 14px;
+            height: 14px;
+            margin-right: 4px;
+          }
+          strong{
+            margin-left: 4px;
+            a{
+              color: #586489;
+            }
+          }
+        }
+      }
+    }
+
+    .lastCat {
+      color: rgb(31, 76, 205);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding-bottom: 4px;
+      display: block;
+  }
+  }

@@ -1,0 +1,27 @@
+/* Add your CSS styles for BGWidgetCard here */
+.SocialIcons{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @media screen and (max-width:900px) {
+    justify-content: center;
+  }
+  li{
+    width: 39px;
+    height: 39px;
+    list-style-type: none;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    svg{
+      width: 39px;
+      height: 39px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      transform: scale(0.8);
+    }
+  }
+}
