@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from "@/styles/widgets/widgetA.module.scss";
-const Widget1 = ({ id }) => {
+const Widget1 = ({ id  , data}) => {
+  console.log('@@@' , data )
+
     return (
         <div className={styles.news_card}>
           <a href='#'>

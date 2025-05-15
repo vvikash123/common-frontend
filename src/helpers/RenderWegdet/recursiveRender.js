@@ -23,11 +23,12 @@ const RecursiveRender = ({ node, globalProps = {} }) => {
       );
 
     case "component":
-      const Component = widgetRegistry?.[node?.content];
+      const Component = widgetRegistry?.[node?.widgetName];
       if (!Component) {
-        return <div key={node.id}>Unknown component: {node.content}</div>;
+        console.log('@@@ERROR' , `Unknown component: ${node.content}`)
+        return null;
       }
-      return <Component key={node?.id} {...globalProps} />;
+      return <Component key={node?.id} {...globalProps} data={node} />;
 
     default:
       return null;

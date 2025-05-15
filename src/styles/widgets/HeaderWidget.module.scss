@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #112;
+    padding: 1rem;
+    color: white;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  
+    li {
+      cursor: pointer;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #ffcc00;
+      }
+    }
+  }
+  

@@ -1,96 +1,103 @@
 // pages/api/home-builder.js
 
 export default function handler(req, res) {
-  const jsonsample = [
+  const jsonLayout = [
+    {
+      type: "component",
+      id: "header-1",
+      widgetName: "HeaderWidget",
+      props: {
+        logo: "https://cdn.pixabay.com/photo/2023/09/14/10/27/face-logo-8252748_1280.png",
+        menu: ["Home", "Politics", "Sports", "Entertainment"]
+      }
+    },
+    {
+      
+        type: "component",
+        id: "widget-1",
+        widgetName: "Widget3",
+        props: {
+          title: "Top News",
+          items: ["Story A", "Story B", "Story C"]
+        }
+      
+    },
     {
       type: "row",
-      id: "DT2j8jLmTU",
+      id: "row-main",
       children: [
         {
           type: "column",
-          id: "XuD_nEt9C6",
+          id: "main-content",
           children: [
             {
-              id: "RFab1uALW",
               type: "component",
-              content: "widget2"
+              id: "widget-1",
+              widgetName: "Widget1",
+              props: {
+                title: "Top News",
+                items: ["Story A", "Story B", "Story C"]
+              }
+            },
+            {
+              type: "component",
+              id: "widget-2",
+              widgetName: "Widget2",
+              props: {
+                title: "Featured",
+                items: ["Feature A", "Feature B"]
+              }
             }
           ]
         },
         {
           type: "column",
-          id: "XuD_nEt9C4",
+          id: "rhs-column",
           children: [
             {
-              id: "RFab1uALW",
               type: "component",
-              content: "widget3"
+              id: "rhs-widget-1",
+              widgetName: "RHSWidget",
+              props: {
+                heading: "Sponsored",
+                ads: ["Ad1", "Ad2"]
+              }
+            },
+            {
+              type: "component",
+              id: "rhs-widget-2",
+              widgetName: "RHSWidget",
+              props: {
+                heading: "Editor's Choice",
+                items: ["Opinion A", "Opinion B"]
+              }
             }
           ]
         }
       ]
     },
     {
-      type: "row",
-      id: "DpvTHGbVdn",
-      children: [
-        {
-          type: "column",
-          id: "8s8Y4oVB-l",
-          children: [
-            {
-              id: "jLSMszeXs",
-              type: "component",
-              content: "widget3"
-            },
-            {
-              id: "nhghFz6u4",
-              type: "component",
-              content: "widget1"
-            },
-            {
-              id: "HRfjVdYdZ",
-              type: "component",
-              content: "widget1"
-            }
-          ]
-        },
-        {
-          type: "column",
-          id: "1KY4BrB0OJ",
-          children: [
-            {
-              id: "iTFC5I36y",
-              type: "component",
-              content: "widget3"
-            }
-          ]
-        },
-        {
-          type: "column",
-          id: "8pMCjQ7pqn",
-          children: [
-            {
-              id: "l59kU-gA9",
-              type: "component",
-              content: "widget2"
-            }
-          ]
-        }
-      ]
+      type: "component",
+      id: "footer-1",
+      widgetName: "FooterWidget",
+      props: {
+        copyright:
+          "© 2025 Times Now Marathi. All Rights Reserved.",
+        links: ["Privacy Policy", "Terms of Service", "Contact"]
+      }
     }
   ];
 
   res.status(200).json({
     status: true,
     response: {
-      data: jsonsample,
+      data: jsonLayout,
       seo: {
-        title: "Latest Marathi News:Times Now Marathi | Maharashtra news in marathi",
+        title: "Latest Marathi News: Times Now Marathi | Maharashtra news in Marathi",
         description:
-          "Latest Marathi News: Pune, Nashik, Mumbai  Maharashtra News, Read the latest and breaking news only on Times Now Marathi",
+          "Latest Marathi News: Pune, Nashik, Mumbai Maharashtra News, Read the latest and breaking news only on Times Now Marathi",
         keywords:
-          "Marathi News, Marathi News Latest, Latest News in Marathi, Maharashtra news in marathi, Times Now Marathi, Times Now Marathi news",
+          "Marathi News, Marathi News Latest, Latest News in Marathi, Maharashtra news in Marathi, Times Now Marathi, Times Now Marathi news",
         ogType: "website",
         canonical: "/",
         seopath: "/",
