@@ -47,6 +47,15 @@ export default function handler(req, res) {
                 title: "Featured",
                 items: ["Feature A", "Feature B"]
               }
+            },
+            {
+              type: "component",
+              id: "widget-3",
+              widgetName: "Widget3",
+              props: {
+                title: "Featured",
+                items: ["Feature A", "Feature B"]
+              }
             }
           ]
         },
@@ -71,7 +80,16 @@ export default function handler(req, res) {
                 heading: "Editor's Choice",
                 items: ["Opinion A", "Opinion B"]
               }
-            }
+            },
+            {
+              type: "component",
+              id: "widget-2",
+              widgetName: "Widget2",
+              props: {
+                title: "Featured",
+                items: ["Feature A", "Feature B"]
+              }
+            },
           ]
         }
       ]
